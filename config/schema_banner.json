@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "_estado": "DERIVADO de la plantilla oficial que exporta Banner (Templates_oficiales/). Estructura verificada sobre dos exportaciones independientes: 13 columnas, hoja 'Grades', encabezados en la fila 1, un curso por archivo. PENDIENTE de confirmar en el entorno de test que un archivo producido por esta herramienta es aceptado al cargarlo (caso BL-07 y Fase 1 del plan).",
+  "_advertencia_procedencia": "Ninguno de los dos ejemplares es la exportación original de Banner: ambos pasaron por Excel (uno por Excel Online, el otro por Excel de escritorio). Los nombres de columna son de Banner 9 Faculty Grade Entry y son confiables, pero el contenedor puede no ser idéntico al que Banner entrega. Confirmar en el entorno de test qué extensión descarga realmente (caso BL-05).",
+
+  "hoja": "Grades",
+  "fila_encabezado": 1,
+  "columna_clave": "Student ID",
+  "columna_nota": "Final Grade",
+  "columna_nombre": "Full Name",
+  "columna_rolled": "Rolled",
+  "columna_confidencial": "Confidential",
+
+  "escribir_nota_como": "texto",
+  "_escribir_nota_como": "La plantilla trae la columna 'Final Grade' preformateada como texto (numFmtId 49, '@'), igual que todas las demás columnas de datos. Se escribe texto para respetar ese contrato y para que el punto decimal sobreviva a cualquier configuración regional.",
+  "formato_celda_nota": "@",
+
+  "valor_rolled_bloquea": "Yes",
+  "_valor_rolled_bloquea": "'Rolled' indica que la nota ya se consolidó en la historia académica. Una fila marcada así no debe modificarse desde el cargue de un docente. En los ejemplares disponibles todas vienen en 'No'; el comportamiento real ante 'Yes' se verifica en el entorno de test.",
+
+  "columnas": [
+    { "encabezado": "Term Code", "rol": "control" },
+    { "encabezado": "CRN", "rol": "control" },
+    { "encabezado": "Full Name", "rol": "nombre" },
+    { "encabezado": "Student ID", "rol": "clave" },
+    { "encabezado": "Rolled", "rol": "control" },
+    { "encabezado": "Confidential", "rol": "control" },
+    { "encabezado": "Course", "rol": "control" },
+    { "encabezado": "Final Grade", "rol": "destino" },
+    { "encabezado": "Last Attended Date", "rol": "opcional", "tipo": "fecha" },
+    { "encabezado": "Hours Attended", "rol": "opcional" },
+    { "encabezado": "Incomplete Final Grade", "rol": "opcional" },
+    { "encabezado": "Extension Date", "rol": "opcional", "tipo": "fecha" },
+    { "encabezado": "Extension Date Constraints", "rol": "control" }
+  ],
+
+  "_columnas_incompletos": "La plantilla incluye 'Incomplete Final Grade', 'Extension Date' y 'Extension Date Constraints', que son el mecanismo de Banner para notas incompletas. Humberto indicó que no existen códigos administrativos en la vista del docente; estas columnas sugieren que el mecanismo sí existe en el sistema. Pregunta abierta: ver plan.md §0.3.",
+
+  "escala": { "minima": "0.0", "maxima": "5.0", "aprobacion": "3.0", "decimales": 1, "redondeo": "ROUND_HALF_UP" }
+}

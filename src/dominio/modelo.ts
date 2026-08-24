@@ -45,7 +45,19 @@ export interface Celda {
 export interface Tabla {
   readonly encabezados: readonly string[];
   readonly filas: readonly (readonly Celda[])[];
-  readonly filaDelEncabezado: number;
+  readonly hoja: string;
+  readonly filaEncabezado: number;
+  readonly incidencias: readonly string[];
+  /**
+   * Identidad del archivo del que salió esta tabla.
+   *
+   * En la referencia es un `Path` y se compara resolviendo rutas. Aquí es un
+   * identificador opaco que pone el adaptador —el nombre del archivo subido, o
+   * lo que sirva para reconocerlo— porque resolver rutas es I/O y el dominio
+   * no la hace. Lo único que el dominio necesita es poder responder "¿este
+   * archivo y la plantilla son el mismo?" (§5.0).
+   */
+  readonly origen: string | null;
 }
 
 /**
@@ -97,17 +109,22 @@ export interface Asignacion {
   readonly motivo: string;
 }
 
+/** Una fila del archivo del docente, ya diagnosticada. */
 export interface FilaAnalizada {
   readonly numero: number;
-  readonly codigo: string | null;
+  readonly codigo: string;
+  readonly nombre: string;
   readonly nota: Nota;
   readonly problemas: readonly string[];
+  readonly avisos: readonly string[];
 }
 
+/** Resultado completo de examinar un archivo. */
 export interface Analisis {
-  readonly filas: readonly FilaAnalizada[];
+  readonly tabla: Tabla;
   readonly mapa: ReadonlyMap<string, Asignacion>;
-  readonly descartadas: readonly { fila: number; motivo: string }[];
+  readonly indiceNota: number;
+  readonly filas: readonly FilaAnalizada[];
 }
 
 /** Una modificación que el docente tiene que poder ver (regla de oro 4). */

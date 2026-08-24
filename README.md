@@ -3,8 +3,9 @@
 Migración del núcleo determinista a Next.js + TypeScript sobre arquitectura
 hexagonal, que es el stack de la organización.
 
-**Estado:** esqueleto. El motor de redondeo está portado y en verde; el resto
-son puertos definidos y stubs con el orden de trabajo.
+**Estado:** todo el dominio puro está portado y en verde — redondeo, valores,
+mapeo y el cruce contra la plantilla. Lo que falta son los adaptadores: leer el
+Excel del docente, escribir el `.xlsx` de cargue y la interfaz.
 
 ```bash
 npm install
@@ -40,10 +41,13 @@ Pero este repositorio **no necesita Python para verificarlo**: lo que se
 versiona aquí son dos archivos JSON.
 
 ```
-herramientas/corpus.json         193 casos de entrada
-herramientas/salida-python.json  lo que Python devuelve para cada uno — el dorado
-tests/oraculo.test.ts            evalúa el corpus con src/dominio y compara
+herramientas/corpus-<modulo>.json         las entradas
+herramientas/salida-python-<modulo>.json  lo que Python devuelve — el dorado
+tests/oraculo.test.ts                     evalúa el corpus con src/dominio y compara
 ```
+
+Un par por módulo portado: `redondeo` (sin sufijo, por ser el primero),
+`valores`, `mapeo` y `plantilla`.
 
 Si divergen en un solo valor, el build cae (`.github/workflows/ci.yml`). Es la
 red de seguridad de toda la migración: migrar lógica que califica estudiantes
@@ -102,6 +106,8 @@ src/
     valores.ts      ✅ PORTADO — interpretar una celda; regla de oro 3
     mapeo.ts        ✅ PORTADO — qué columna es cuál; restricción §4.0
     similitud.ts    ✅ PORTADO — difflib.SequenceMatcher, exacto
+    plantilla.ts    ✅ PORTADO — esquema de Banner y el cruce por Student ID
+    analisis.ts     ✅ PORTADO — predicados derivados sobre el análisis
 
   aplicacion/       Casos de uso y puertos. Depende del dominio, nada más.
     puertos.ts      ✅ Las interfaces del hexágono
@@ -145,14 +151,16 @@ Por dependencia y riesgo, igual que las fases del plan.
 | 1 | ✅ `redondeo.ts` | `redondeo.py` | `test_redondeo.py` — **hecho** |
 | 2 | ✅ `valores.ts` | `valores.py` | `test_valores.py` — **hecho** |
 | 3 | ✅ `mapeo.ts` + `similitud.ts` | `mapeo.py` | `test_mapeo.py` — **hecho** |
-| 4 | `plantilla-zip.ts` | `plantilla.py` | `test_plantilla.py` |
+| 4a | ✅ `plantilla.ts` + `analisis.ts` | `plantilla.py` (parte pura) | `test_plantilla.py` — cruce **hecho** |
+| 4b | `plantilla-zip.ts` | `plantilla.py` (I/O) | lectura y escritura del `.xlsx` |
 | 5 | `lectura-exceljs.ts` | `lectura.py` | `test_lectura.py` |
 | 6 | `formatear-notas.ts` | `flujo.py` + `reporte.py` | `test_flujo.py` |
 | 7 | Adaptador web | `app.py` | — |
 
 Después de cada paso, el corpus se amplía con los casos de ese módulo y la
-prueba diferencial los cubre también. Hoy son **586 casos** en tres pares de
-archivos: 199 de redondeo, 335 de interpretación de celdas y 52 de mapeo.
+prueba diferencial los cubre también. Hoy son **607 casos** en cuatro pares de
+archivos: 199 de redondeo, 335 de interpretación de celdas, 52 de mapeo y 21
+del cruce por identificador.
 
 > **La coincidencia difusa se reimplementó, no se sustituyó.** `plan.md` §4.2
 > menciona `rapidfuzz`, pero la implementación de referencia nunca lo usó: usa

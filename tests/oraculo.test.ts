@@ -6,12 +6,14 @@
  * defendida ante la dirección de cargue académico.
  *
  * Este repositorio es autónomo: no necesita Python ni el repo de la PoC. Lo
- * que se versiona aquí son pares de archivos JSON, uno por módulo portado:
+ * que se versiona aquí son pares de archivos JSON, uno por módulo portado —
+ * `corpus-<modulo>.json` con las entradas y `salida-python-<modulo>.json` con
+ * lo que la referencia devuelve para cada una, el archivo dorado:
  *
- *   herramientas/corpus.json                  entradas del motor de redondeo
- *   herramientas/salida-python.json           lo que Python devuelve — el dorado
- *   herramientas/corpus-valores.json          entradas de la interpretación de celdas
- *   herramientas/salida-python-valores.json   el dorado correspondiente
+ *   redondeo   (corpus.json / salida-python.json, sin sufijo por ser el primero)
+ *   valores    interpretación de una celda
+ *   mapeo      qué columna es cuál, con los puntajes de difflib
+ *   plantilla  el cruce por identificador
  *
  * Cómo se regeneran (solo al ampliar un corpus, y siempre en un commit aparte
  * para que el diff se pueda revisar) — con `herramientas/oraculo.py`, que es de
@@ -53,6 +55,17 @@ import {
   requiereConfirmacion,
   resuelto,
 } from "@dominio/mapeo.ts";
+import {
+  type FilaPlantilla,
+  type Plantilla,
+  cruzar,
+  esquemaDesdeObjeto,
+  motivosDeBloqueo,
+  notaTexto,
+  puedeGenerarCruce,
+  sobrescribenNota,
+} from "@dominio/plantilla.ts";
+import type { Analisis, FilaAnalizada } from "@dominio/modelo.ts";
 
 const RAIZ = fileURLToPath(new URL("..", import.meta.url));
 
@@ -342,6 +355,141 @@ describe("mapeo · diferencial contra el oráculo Python", () => {
           }
         });
       }
+    });
+
+    exigirCoincidencia(divergencias);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Módulo plantilla — el cruce por identificador
+//
+// Aquí SÍ se comparan los motivos de bloqueo, a diferencia de los otros
+// módulos: son plantillas de texto con conteos enteros, sin ningún flotante
+// formateado, así que la igualdad literal es alcanzable y vale la pena.
+//
+// La lectura y la escritura del .xlsx no entran en este corpus: las cubre la
+// suite del adaptador contra el ejemplar anonimizado.
+// ---------------------------------------------------------------------------
+
+interface CasoPlantilla {
+  notas: [string, unknown][];
+  ids: string[];
+  rolled: string[];
+  nota_existente: Record<string, string>;
+  origen_analisis: string;
+  origen_plantilla: string;
+}
+
+interface ResultadoPlantilla {
+  emparejados: { identificador: string; nota: string; normalizado: boolean }[];
+  sin_nota: string[];
+  ya_consolidados: string[];
+  sobrantes: string[];
+  pendientes: string[];
+  sobrescriben_nota: string[];
+  mismo_archivo: boolean;
+  puede_generar: boolean;
+  motivos: string[];
+}
+
+describe("plantilla · diferencial contra el oráculo Python", () => {
+  const corpus = leerJson<CasoPlantilla[]>("herramientas/corpus-plantilla.json");
+  const dorado = leerJson<ResultadoPlantilla[]>(
+    "herramientas/salida-python-plantilla.json",
+  );
+  const esquema = esquemaDesdeObjeto(leerJson<unknown>("config/schema_banner.json"));
+
+  function construir(caso: CasoPlantilla): { analisis: Analisis; plantilla: Plantilla } {
+    const filas: FilaAnalizada[] = caso.notas.map(([codigo, valor], k) => ({
+      numero: k + 1,
+      codigo: String(codigo),
+      nombre: `Estudiante ${String(k + 1).padStart(3, "0")}`,
+      nota: interpretar(valor),
+      problemas: [],
+      avisos: [],
+    }));
+
+    const analisis: Analisis = {
+      tabla: {
+        encabezados: [],
+        filas: [],
+        hoja: "",
+        filaEncabezado: 0,
+        incidencias: [],
+        origen: caso.origen_analisis || null,
+      },
+      mapa: new Map(),
+      indiceNota: 0,
+      filas,
+    };
+
+    const filasPlantilla: FilaPlantilla[] = caso.ids.map((ident, i) => ({
+      fila: i + 2,
+      identificador: ident,
+      nombre: `Anonimo ${i + 1}`,
+      rolled: caso.rolled.includes(ident),
+      confidencial: false,
+      notaExistente: caso.nota_existente[ident] ?? "",
+    }));
+
+    const plantilla: Plantilla = {
+      origen: caso.origen_plantilla,
+      esquema,
+      columnas: new Map([
+        ["Student ID", 4],
+        ["Final Grade", 8],
+      ]),
+      filas: filasPlantilla,
+      control: new Map([
+        ["Course", "ANON-101"],
+        ["Term Code", "202610"],
+        ["CRN", "12345"],
+      ]),
+    };
+
+    return { analisis, plantilla };
+  }
+
+  it("el corpus y el archivo dorado tienen el mismo tamaño", () => {
+    expect(dorado).toHaveLength(corpus.length);
+    expect(corpus.length).toBeGreaterThan(0);
+  });
+
+  it("el corpus ejercita los dos desenlaces del cruce", () => {
+    expect(dorado.some((r) => r.puede_generar)).toBe(true);
+    expect(dorado.some((r) => !r.puede_generar)).toBe(true);
+    expect(dorado.some((r) => r.mismo_archivo)).toBe(true);
+    expect(dorado.some((r) => r.ya_consolidados.length)).toBe(true);
+  });
+
+  it("TypeScript y Python coinciden en el 100% de los casos", () => {
+    const divergencias: string[] = [];
+
+    corpus.forEach((caso, i) => {
+      const esperado = dorado[i]!;
+      const { analisis, plantilla } = construir(caso);
+      const cruce = cruzar(analisis, plantilla);
+
+      const obtenido: ResultadoPlantilla = {
+        emparejados: cruce.emparejados.map((e) => ({
+          identificador: e.plantilla.identificador,
+          nota: notaTexto(e),
+          normalizado: e.identificadorNormalizado,
+        })),
+        sin_nota: cruce.sinNota.map((f) => f.identificador),
+        ya_consolidados: cruce.yaConsolidados.map((e) => e.plantilla.identificador),
+        sobrantes: cruce.sobrantes.map((f) => f.codigo),
+        pendientes: cruce.pendientes.map((f) => f.codigo),
+        sobrescriben_nota: sobrescribenNota(cruce).map((e) => e.plantilla.identificador),
+        mismo_archivo: cruce.mismoArchivo,
+        puede_generar: puedeGenerarCruce(cruce),
+        motivos: motivosDeBloqueo(cruce),
+      };
+
+      const a = JSON.stringify(obtenido);
+      const b = JSON.stringify(esperado);
+      if (a !== b) divergencias.push(`[${i}] python=${b}\n     ts=${a}`);
     });
 
     exigirCoincidencia(divergencias);

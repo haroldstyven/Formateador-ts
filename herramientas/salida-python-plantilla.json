@@ -1,0 +1,1242 @@
+[
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "4.3",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "3.0",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "3.0",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "4.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "4.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [
+      "ID-011",
+      "ID-012"
+    ],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": false,
+    "motivos": [
+      "2 estudiante(s) del curso no tienen nota en tu archivo."
+    ]
+  },
+  {
+    "emparejados": [],
+    "sin_nota": [
+      "ID-001",
+      "ID-002",
+      "ID-003",
+      "ID-004",
+      "ID-005",
+      "ID-006",
+      "ID-007",
+      "ID-008",
+      "ID-009",
+      "ID-010",
+      "ID-011",
+      "ID-012"
+    ],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": false,
+    "motivos": [
+      "12 estudiante(s) del curso no tienen nota en tu archivo.",
+      "Ningún estudiante del archivo coincide con el listado de Banner."
+    ]
+  },
+  {
+    "emparejados": [],
+    "sin_nota": [
+      "ID-001",
+      "ID-002",
+      "ID-003",
+      "ID-004",
+      "ID-005",
+      "ID-006",
+      "ID-007",
+      "ID-008",
+      "ID-009",
+      "ID-010",
+      "ID-011",
+      "ID-012"
+    ],
+    "ya_consolidados": [],
+    "sobrantes": [
+      "ID-999"
+    ],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": false,
+    "motivos": [
+      "12 estudiante(s) del curso no tienen nota en tu archivo.",
+      "Ningún estudiante del archivo coincide con el listado de Banner."
+    ]
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [
+      "ID-999"
+    ],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [
+      "ID-004"
+    ],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": false,
+    "motivos": [
+      "1 nota(s) del archivo esperan una decisión tuya."
+    ]
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [
+      "ID-008"
+    ],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": false,
+    "motivos": [
+      "1 nota(s) del archivo esperan una decisión tuya."
+    ]
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [
+      "ID-001"
+    ],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": false,
+    "motivos": [
+      "1 nota(s) del archivo esperan una decisión tuya."
+    ]
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "4.3",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [
+      "ID-003"
+    ],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": false,
+    "motivos": [
+      "1 estudiante(s) ya tienen la nota consolidada en historia académica y no se pueden modificar desde aquí."
+    ]
+  },
+  {
+    "emparejados": [],
+    "sin_nota": [],
+    "ya_consolidados": [
+      "ID-001",
+      "ID-002",
+      "ID-003",
+      "ID-004",
+      "ID-005",
+      "ID-006",
+      "ID-007",
+      "ID-008",
+      "ID-009",
+      "ID-010",
+      "ID-011",
+      "ID-012"
+    ],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": false,
+    "motivos": [
+      "12 estudiante(s) ya tienen la nota consolidada en historia académica y no se pueden modificar desde aquí.",
+      "Ningún estudiante del archivo coincide con el listado de Banner."
+    ]
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "4.3",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [
+      "ID-001",
+      "ID-002"
+    ],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-004",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-005",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-006",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-007",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-008",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-009",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-010",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-011",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-012",
+        "nota": "4.3",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": true,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "4.3",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "4.3",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [
+      "ID-004",
+      "ID-005",
+      "ID-006",
+      "ID-007",
+      "ID-008",
+      "ID-009",
+      "ID-010",
+      "ID-011",
+      "ID-012"
+    ],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-002",
+        "nota": "3.5",
+        "normalizado": true
+      },
+      {
+        "identificador": "ID-003",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  },
+  {
+    "emparejados": [
+      {
+        "identificador": "ID-001",
+        "nota": "3.5",
+        "normalizado": true
+      }
+    ],
+    "sin_nota": [],
+    "ya_consolidados": [],
+    "sobrantes": [],
+    "pendientes": [],
+    "sobrescriben_nota": [],
+    "mismo_archivo": false,
+    "puede_generar": true,
+    "motivos": []
+  }
+]

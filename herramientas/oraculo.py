@@ -70,6 +70,14 @@ from formateador.mapeo import (  # noqa: E402
     mapear,
     puntaje_encabezado,
 )
+from formateador.lectura import Tabla  # noqa: E402
+from formateador.flujo import Analisis, FilaAnalizada  # noqa: E402
+from formateador.plantilla import (  # noqa: E402
+    EsquemaBanner,
+    FilaPlantilla,
+    Plantilla,
+    cruzar,
+)
 
 CORPUS = AQUI / "corpus.json"
 
@@ -376,10 +384,162 @@ def evaluar_mapeo(casos: list[dict[str, object]]) -> list[dict[str, object]]:
     return resultados
 
 
+# --------------------------------------------------------------------------
+# Módulo `plantilla`: el cruce por identificador.
+#
+# Se evalúa `cruzar()` sobre analisis y plantillas armados a mano, sin pasar
+# por el lector ni por `analizar_archivo`: lo que se contrasta es la logica del
+# cruce, no la lectura del .xlsx. La lectura y la escritura las cubre la suite
+# del adaptador, contra el ejemplar anonimizado.
+#
+# Aqui SI se comparan los motivos de bloqueo, a diferencia de los otros
+# modulos: son plantillas de texto con conteos enteros, sin ningun flotante
+# formateado, asi que la igualdad literal es alcanzable y vale la pena.
+# --------------------------------------------------------------------------
+
+CORPUS_PLANTILLA = AQUI / "corpus-plantilla.json"
+
+IDS = [f"ID-{n:03d}" for n in range(1, 13)]
+
+
+def _fila(numero: int, codigo: str, valor: object) -> FilaAnalizada:
+    return FilaAnalizada(
+        numero=numero,
+        codigo=codigo,
+        nombre=f"Estudiante {numero:03d}",
+        nota=interpretar(valor),
+    )
+
+
+def _analisis(filas: list[FilaAnalizada], origen: str | None = "notas.xlsx") -> Analisis:
+    tabla = Tabla(
+        encabezados=[],
+        filas=[],
+        origen=Path(origen) if origen else None,
+    )
+    return Analisis(tabla=tabla, mapa={}, indice_nota=0, filas=filas)
+
+
+def _plantilla(
+    ids: list[str],
+    rolled: list[str] | None = None,
+    nota_existente: dict[str, str] | None = None,
+    origen: str = "Template_Anonimo.xlsx",
+) -> Plantilla:
+    rolled = rolled or []
+    nota_existente = nota_existente or {}
+    filas = tuple(
+        FilaPlantilla(
+            fila=i + 2,
+            identificador=ident,
+            nombre=f"Anonimo {i + 1}",
+            rolled=ident in rolled,
+            confidencial=False,
+            nota_existente=nota_existente.get(ident, ""),
+        )
+        for i, ident in enumerate(ids)
+    )
+    return Plantilla(
+        ruta=Path(origen),
+        esquema=EsquemaBanner.desde_json(AQUI.parent / "config" / "schema_banner.json"),
+        columnas={"Student ID": 4, "Final Grade": 8},
+        filas=filas,
+        control={"Course": "ANON-101", "Term Code": "202610", "CRN": "12345"},
+    )
+
+
+def generar_corpus_plantilla() -> list[dict[str, object]]:
+    """Cada caso declara las notas del docente y la forma de la plantilla."""
+    casos: list[dict[str, object]] = []
+
+    def añadir(notas, ids=None, rolled=None, nota_existente=None,
+               origen_analisis="notas.xlsx", origen_plantilla="Template_Anonimo.xlsx"):
+        casos.append({
+            "notas": notas,                       # lista de [codigo, valor]
+            "ids": ids if ids is not None else IDS,
+            "rolled": rolled or [],
+            "nota_existente": nota_existente or {},
+            "origen_analisis": origen_analisis,
+            "origen_plantilla": origen_plantilla,
+        })
+
+    completo = [[i, "4.25"] for i in IDS]
+
+    añadir(completo)
+    añadir([[i, "3.5"] for i in IDS])
+    añadir([[i, "2.95"] for i in IDS])          # la frontera de aprobacion
+    añadir([[i, "4,5"] for i in IDS])           # coma decimal
+    añadir([[i, "3.5"] for i in reversed(IDS)])  # orden invertido
+    añadir([[i, "3.5"] for i in IDS[:-2]])      # dos estudiantes sin nota
+    añadir([])                                   # archivo vacio
+    añadir([["ID-999", "5.0"]])                  # solo un intruso
+    añadir([[i, "3.5"] for i in IDS] + [["ID-999", "5.0"]])
+    añadir([[i, "NP" if k == 3 else "3.5"] for k, i in enumerate(IDS)])
+    añadir([[i, "" if k == 7 else "3.5"] for k, i in enumerate(IDS)])
+    añadir([[i, "85" if k == 0 else "3.5"] for k, i in enumerate(IDS)])
+    añadir([[i.lower().replace("-", " "), "3.5"] for i in IDS])
+    añadir([[i, "3.5"] for i in IDS] + [[IDS[0], "1.0"]])   # duplicado
+    añadir(completo, rolled=[IDS[2]])
+    añadir(completo, rolled=IDS)
+    añadir(completo, nota_existente={IDS[0]: "4.0", IDS[1]: "2.0"})
+    # Mismo archivo: el docente subio la plantilla ya diligenciada.
+    añadir(completo, nota_existente={IDS[0]: "4.0"},
+           origen_analisis="Template_Anonimo.xlsx")
+    añadir(completo, ids=IDS[:3])                # plantilla mas corta
+    añadir([[i, "3.5"] for i in IDS[:3]], ids=IDS[:3])
+    añadir([["", "3.5"], [IDS[0], "3.5"]], ids=[IDS[0]])   # codigo vacio
+
+    return casos
+
+
+def evaluar_plantilla(casos: list[dict[str, object]]) -> list[dict[str, object]]:
+    resultados: list[dict[str, object]] = []
+
+    for caso in casos:
+        filas = [
+            _fila(k + 1, str(codigo), valor)
+            for k, (codigo, valor) in enumerate(caso["notas"])  # type: ignore[arg-type]
+        ]
+        analisis = _analisis(filas, str(caso["origen_analisis"]))
+        plantilla = _plantilla(
+            list(caso["ids"]),                    # type: ignore[arg-type]
+            list(caso["rolled"]),                 # type: ignore[arg-type]
+            dict(caso["nota_existente"]),         # type: ignore[arg-type]
+            str(caso["origen_plantilla"]),
+        )
+        cruce = cruzar(analisis, plantilla)
+
+        resultados.append(
+            {
+                "emparejados": [
+                    {
+                        "identificador": e.plantilla.identificador,
+                        "nota": e.nota_texto,
+                        "normalizado": e.identificador_normalizado,
+                    }
+                    for e in cruce.emparejados
+                ],
+                "sin_nota": [f.identificador for f in cruce.sin_nota],
+                "ya_consolidados": [e.plantilla.identificador for e in cruce.ya_consolidados],
+                "sobrantes": [f.codigo for f in cruce.sobrantes],
+                "pendientes": [f.codigo for f in cruce.pendientes],
+                "sobrescriben_nota": [
+                    e.plantilla.identificador for e in cruce.sobrescriben_nota
+                ],
+                "mismo_archivo": cruce.mismo_archivo,
+                "puede_generar": cruce.puede_generar,
+                "motivos": cruce.motivos_de_bloqueo,
+            }
+        )
+
+    return resultados
+
+
 MODULOS = {
     "redondeo": (CORPUS, generar_corpus, evaluar),
     "valores": (CORPUS_VALORES, generar_corpus_valores, evaluar_valores),
     "mapeo": (CORPUS_MAPEO, generar_corpus_mapeo, evaluar_mapeo),
+    "plantilla": (CORPUS_PLANTILLA, generar_corpus_plantilla, evaluar_plantilla),
 }
 
 
