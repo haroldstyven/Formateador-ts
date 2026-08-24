@@ -1,0 +1,1912 @@
+[
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo de estudiante",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo de estudiante",
+            "indice": 1,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "nota definitiva",
+        "indice": 5,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "nota definitiva",
+            "indice": 5,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": "nombre",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "nombre",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      }
+    },
+    "puntaje_encabezado": 6.6
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "Student ID",
+        "indice": 3,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "Student ID",
+            "indice": 3,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "Final Grade",
+        "indice": 5,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "Final Grade",
+            "indice": 5,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": "Full Name",
+        "indice": 4,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "Full Name",
+            "indice": 4,
+            "puntaje": 1.0
+          }
+        ]
+      }
+    },
+    "puntaje_encabezado": 14.3
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 0.0
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 0.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 3.3
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo de estudiante",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo de estudiante",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "nota definitiva",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "nota definitiva",
+            "indice": 1,
+            "puntaje": 1.0
+          },
+          {
+            "encabezado": "definitiva",
+            "indice": 2,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 3.3
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo de estudiante",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo de estudiante",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "promedio",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "promedio",
+            "indice": 1,
+            "puntaje": 0.85
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "Código de Estudiante",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "Código de Estudiante",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "NOTA DEFINITIVA",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "NOTA DEFINITIVA",
+            "indice": 1,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "CODIGO_DE_ESTUDIANTE",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "CODIGO_DE_ESTUDIANTE",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "Nota  Definitiva",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "Nota  Definitiva",
+            "indice": 1,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "nota_definitiva",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "nota_definitiva",
+            "indice": 1,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "Nota Definitva",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "Nota Definitva",
+            "indice": 1,
+            "puntaje": 0.9172413793103448
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "notta definitiva",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "notta definitiva",
+            "indice": 1,
+            "puntaje": 0.9193548387096774
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "nta definitva",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "nta definitva",
+            "indice": 1,
+            "puntaje": 0.8821428571428571
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "definitivas",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "definitivas",
+            "indice": 1,
+            "puntaje": 0.9047619047619047
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "calificacion definitiva",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "calificacion definitiva",
+            "indice": 1,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "calificasion final",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "calificasion final",
+            "indice": 1,
+            "puntaje": 0.8972222222222221
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "id",
+        "indice": 0,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "id",
+            "indice": 0,
+            "puntaje": 0.85
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "nota",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "nota",
+            "indice": 1,
+            "puntaje": 0.85
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "no",
+        "indice": 0,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "no",
+            "indice": 0,
+            "puntaje": 0.85
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "total",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "total",
+            "indice": 1,
+            "puntaje": 0.85
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "numero",
+        "indice": 0,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "numero",
+            "indice": 0,
+            "puntaje": 0.85
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "final",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "final",
+            "indice": 1,
+            "puntaje": 0.85
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "documento",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "documento",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "promedio",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "promedio",
+            "indice": 1,
+            "puntaje": 0.85
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "cedula",
+        "indice": 0,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "cedula",
+            "indice": 0,
+            "puntaje": 1.0
+          },
+          {
+            "encabezado": "documento",
+            "indice": 1,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "nota final",
+        "indice": 2,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "nota final",
+            "indice": 2,
+            "puntaje": 1.0
+          },
+          {
+            "encabezado": "nota definitiva",
+            "indice": 3,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 4.4
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "student id",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "student id",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "final grade",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "final grade",
+            "indice": 1,
+            "puntaje": 1.0
+          },
+          {
+            "encabezado": "definitiva",
+            "indice": 2,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 3.3
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "definitiva",
+        "indice": 4,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "definitiva",
+            "indice": 4,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": "nombre",
+        "indice": 1,
+        "confianza": "media",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "nombre",
+            "indice": 1,
+            "puntaje": 1.0
+          },
+          {
+            "encabezado": "nombres",
+            "indice": 2,
+            "puntaje": 1.0
+          },
+          {
+            "encabezado": "nombre completo",
+            "indice": 3,
+            "puntaje": 1.0
+          }
+        ]
+      }
+    },
+    "puntaje_encabezado": 5.5
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 5.5
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 3.3
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 2,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 2,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "definitiva",
+        "indice": 3,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "definitiva",
+            "indice": 3,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo de estudiante",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo de estudiante",
+            "indice": 1,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "nota definitiva",
+        "indice": 2,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "nota definitiva",
+            "indice": 2,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 2,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 2,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "definitiva",
+        "indice": 3,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "definitiva",
+            "indice": 3,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "   codigo   ",
+        "indice": 1,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "   codigo   ",
+            "indice": 1,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "   nota   definitiva   ",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "   nota   definitiva   ",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo",
+        "indice": 2,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo",
+            "indice": 2,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": "definitiva",
+        "indice": 3,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "definitiva",
+            "indice": 3,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.4
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 0.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "identificacion",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "identificacion",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 2.2
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": "nombre",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "nombre",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "codigo de estudiante",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "codigo de estudiante",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": "nota definitiva",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "nota definitiva",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": "Student ID",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "Student ID",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": "Full Name",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": false,
+        "candidatas": [
+          {
+            "encabezado": "Full Name",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": "Final Grade",
+        "indice": 0,
+        "confianza": "alta",
+        "resuelto": true,
+        "requiere_confirmacion": true,
+        "candidatas": [
+          {
+            "encabezado": "Final Grade",
+            "indice": 0,
+            "puntaje": 1.0
+          }
+        ]
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  },
+  {
+    "campos": {
+      "codigo_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nota_definitiva": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      },
+      "nombre_estudiante": {
+        "encabezado": null,
+        "indice": null,
+        "confianza": "nula",
+        "resuelto": false,
+        "requiere_confirmacion": true,
+        "candidatas": []
+      }
+    },
+    "puntaje_encabezado": 1.1
+  }
+]

@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "_nota": "Diccionario determinista de la cascada de mapeo (plan.md §4.1). 'exactos' produce confianza alta; 'debiles' nunca la produce, porque son nombres plausibles pero ambiguos. 'descartar' es la lista de columnas que jamás pueden ser candidatas: en el archivo del docente hay cuatro columnas numéricas en escala 0.0-5.0 y solo una es la definitiva (plan.md §4.0). Incluye los encabezados en inglés de la plantilla oficial de Banner, para que el mismo lector sirva cuando el docente llena la plantilla directamente.",
+  "campos": {
+    "codigo_estudiante": {
+      "exactos": [
+        "student id",
+        "codigo de estudiante",
+        "codigo del estudiante",
+        "codigo estudiante",
+        "codigo",
+        "cod estudiante",
+        "cod",
+        "documento",
+        "numero de documento",
+        "cedula",
+        "identificacion",
+        "id estudiante"
+      ],
+      "debiles": [
+        "id",
+        "no",
+        "numero"
+      ]
+    },
+    "nota_definitiva": {
+      "exactos": [
+        "final grade",
+        "nota definitiva",
+        "definitiva",
+        "nota final",
+        "calificacion definitiva",
+        "calificacion final",
+        "def"
+      ],
+      "debiles": [
+        "final",
+        "promedio",
+        "nota",
+        "calificacion",
+        "total"
+      ]
+    },
+    "nombre_estudiante": {
+      "exactos": [
+        "full name",
+        "nombre",
+        "nombres",
+        "nombre del estudiante",
+        "nombre completo",
+        "estudiante",
+        "apellidos y nombres"
+      ],
+      "debiles": [
+        "apellidos"
+      ]
+    }
+  },
+  "descartar": [
+    "trabajos",
+    "trabajo",
+    "taller",
+    "talleres",
+    "quiz",
+    "quizes",
+    "quices",
+    "quizzes",
+    "examen",
+    "examenes",
+    "parcial",
+    "parciales",
+    "primer parcial",
+    "segundo parcial",
+    "corte",
+    "primer corte",
+    "segundo corte",
+    "tercer corte",
+    "seguimiento",
+    "asistencia",
+    "participacion",
+    "exposicion",
+    "proyecto",
+    "laboratorio",
+    "observaciones",
+    "correo",
+    "email",
+    "programa",
+    "grupo",
+    "semestre",
+    "term code",
+    "crn",
+    "rolled",
+    "confidential",
+    "course",
+    "last attended date",
+    "hours attended",
+    "incomplete final grade",
+    "extension date",
+    "extension date constraints"
+  ]
+}

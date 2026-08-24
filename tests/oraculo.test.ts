@@ -14,15 +14,16 @@
  *   herramientas/salida-python-valores.json   el dorado correspondiente
  *
  * Cómo se regeneran (solo al ampliar un corpus, y siempre en un commit aparte
- * para que el diff se pueda revisar):
+ * para que el diff se pueda revisar) — con `herramientas/oraculo.py`, que es de
+ * este repositorio y lee la referencia desde un clon local:
  *
- *   # en el repo de la PoC, Formateador-Banner
  *   python herramientas/oraculo.py --modulo valores --generar-corpus
- *   python herramientas/oraculo.py --modulo valores > salida-python-valores.json
- *   # y se copian los dos archivos a herramientas/ de este repo
+ *   python herramientas/oraculo.py --modulo valores > herramientas/salida-python-valores.json
  *
- * Si una línea de un archivo dorado cambia sin que nadie haya ampliado el
- * corpus, algo se rompió: no se actualiza el dorado para que pase el test.
+ * La referencia está congelada, así que ante una divergencia la pregunta es
+ * cuál de las dos tiene razón. Si la tiene el port, se regenera el dorado y el
+ * commit explica por qué. Lo que no se hace nunca es actualizar el dorado para
+ * que el test pase.
  *
  * QUÉ SE COMPARA, Y POR QUÉ NO TODO. En `valores` no se compara la prosa de
  * `detalle`. La representación de un decimal difiere entre Python y decimal.js
@@ -45,6 +46,13 @@ import {
   interpretar,
   requiereDecision,
 } from "@dominio/valores.ts";
+import {
+  CatalogoAlias,
+  mapear,
+  puntajeEncabezado,
+  requiereConfirmacion,
+  resuelto,
+} from "@dominio/mapeo.ts";
 
 const RAIZ = fileURLToPath(new URL("..", import.meta.url));
 
@@ -202,6 +210,137 @@ describe("valores · diferencial contra el oráculo Python", () => {
               )
               .join(", "),
         );
+      }
+    });
+
+    exigirCoincidencia(divergencias);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Módulo mapeo
+//
+// Es el corpus que más importa de los tres, porque `mapeo.ts` no traduce solo
+// código nuestro: `similitud.ts` reimplementa `difflib.SequenceMatcher`. Los
+// puntajes se comparan como doubles exactos, sin tolerancia — un algoritmo
+// "casi igual" solo se nota en la frontera de 0.90 y 0.78, que es justo donde
+// se decide si una columna se elige sola o se pregunta.
+//
+// `motivo` no se compara: incluye un `${x.toFixed(2)}`, y el formateo de
+// flotantes en el punto medio no coincide entre Python y JavaScript.
+// ---------------------------------------------------------------------------
+
+interface CasoMapeo {
+  encabezados: unknown[];
+}
+
+interface CandidataDorada {
+  encabezado: string;
+  indice: number;
+  puntaje: number;
+}
+
+interface AsignacionDorada {
+  encabezado: string | null;
+  indice: number | null;
+  confianza: string;
+  resuelto: boolean;
+  requiere_confirmacion: boolean;
+  candidatas: CandidataDorada[];
+}
+
+interface ResultadoMapeo {
+  campos: Record<string, AsignacionDorada>;
+  puntaje_encabezado: number;
+}
+
+describe("mapeo · diferencial contra el oráculo Python", () => {
+  const corpus = leerJson<CasoMapeo[]>("herramientas/corpus-mapeo.json");
+  const dorado = leerJson<ResultadoMapeo[]>("herramientas/salida-python-mapeo.json");
+  const catalogo = CatalogoAlias.desdeObjeto(
+    leerJson<unknown>("config/alias_columnas.json"),
+  );
+
+  it("el corpus y el archivo dorado tienen el mismo tamaño", () => {
+    expect(dorado).toHaveLength(corpus.length);
+    expect(corpus.length).toBeGreaterThan(0);
+  });
+
+  it("el corpus ejercita los tres niveles de confianza", () => {
+    const niveles = new Set(
+      dorado.flatMap((r) => Object.values(r.campos).map((a) => a.confianza)),
+    );
+    expect([...niveles].sort()).toEqual(["alta", "media", "nula"]);
+  });
+
+  it("TypeScript y Python coinciden en el 100% de los casos", () => {
+    const divergencias: string[] = [];
+
+    corpus.forEach((caso, i) => {
+      const esperado = dorado[i]!;
+      const mapa = mapear(caso.encabezados, catalogo);
+      const etiqueta = `[${i}] ${JSON.stringify(caso.encabezados)}`;
+
+      const puntaje = puntajeEncabezado(caso.encabezados, catalogo);
+      if (puntaje !== esperado.puntaje_encabezado) {
+        divergencias.push(
+          `${etiqueta} puntaje_encabezado: python=${esperado.puntaje_encabezado} ts=${puntaje}`,
+        );
+      }
+
+      const camposEsperados = Object.keys(esperado.campos).sort();
+      const camposObtenidos = [...mapa.keys()].sort();
+      if (camposEsperados.join() !== camposObtenidos.join()) {
+        divergencias.push(
+          `${etiqueta} campos: python=${camposEsperados} ts=${camposObtenidos}`,
+        );
+        return;
+      }
+
+      for (const campo of camposEsperados) {
+        const e = esperado.campos[campo]!;
+        const a = mapa.get(campo)!;
+
+        const escalares: [string, unknown, unknown][] = [
+          ["encabezado", e.encabezado, a.encabezado],
+          ["indice", e.indice, a.indice],
+          ["confianza", e.confianza, a.confianza],
+          ["resuelto", e.resuelto, resuelto(a)],
+          ["requiere_confirmacion", e.requiere_confirmacion, requiereConfirmacion(a)],
+        ];
+        for (const [nombre, python, ts] of escalares) {
+          if (python !== ts) {
+            divergencias.push(
+              `${etiqueta} ${campo}.${nombre}: python=${JSON.stringify(python)} ts=${JSON.stringify(ts)}`,
+            );
+          }
+        }
+
+        if (e.candidatas.length !== a.candidatas.length) {
+          divergencias.push(
+            `${etiqueta} ${campo}.candidatas: python=${e.candidatas.length} ts=${a.candidatas.length}`,
+          );
+          continue;
+        }
+
+        e.candidatas.forEach((ce, k) => {
+          const ca = a.candidatas[k]!;
+          // Puntaje con igualdad exacta: es lo que valida el port de difflib.
+          if (
+            ce.encabezado !== ca.encabezado ||
+            ce.indice !== ca.indice ||
+            ce.puntaje !== ca.puntaje
+          ) {
+            divergencias.push(
+              `${etiqueta} ${campo}.candidatas[${k}]: ` +
+                `python=${JSON.stringify(ce)} ts=${JSON.stringify({
+                  encabezado: ca.encabezado,
+                  indice: ca.indice,
+                  puntaje: ca.puntaje,
+                })}`,
+            );
+          }
+        });
       }
     });
 

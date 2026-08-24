@@ -16,9 +16,9 @@ npm run typecheck
 
 ## Esta es la implementación definitiva
 
-La PoC en Python vive en el repositorio **`Formateador-Banner`** y va a
-desaparecer. Decidido el 24 de agosto de 2026: el destino del proyecto es este
-repositorio.
+La PoC en Python vive en **https://github.com/haroldstyven/Formateador** y está
+**congelada**: se consulta como referencia, no recibe más commits ni despliegues.
+Decidido el 24 de agosto de 2026 — el destino del proyecto es este repositorio.
 
 Ahí siguen, mientras dure el port, los documentos que no se duplican aquí:
 
@@ -50,18 +50,33 @@ red de seguridad de toda la migración: migrar lógica que califica estudiantes
 sin ella es volver a apostar desde cero.
 
 **Al ampliar el corpus** —cada módulo portado añade sus casos— se regenera el
-dorado desde el repo de la PoC y se copian los dos archivos:
+dorado desde aquí. `herramientas/oraculo.py` es una herramienta de desarrollo
+de este repositorio: importa la implementación de referencia desde un clon
+local y escribe los JSON en su sitio.
 
 ```bash
-# en Formateador-Banner
-python herramientas/oraculo.py --generar-corpus
-python herramientas/oraculo.py > herramientas/salida-python.json
-cp herramientas/{corpus,salida-python}.json ../Formateador-ts/herramientas/
+git clone https://github.com/haroldstyven/Formateador ../Formateador-Banner
+python herramientas/oraculo.py --modulo valores --generar-corpus
+python herramientas/oraculo.py --modulo valores > herramientas/salida-python-valores.json
 ```
 
-Siempre en un commit aparte, para que el diff del dorado se pueda revisar. Si
-una línea cambia sin que nadie haya ampliado el corpus, algo se rompió: **no se
-actualiza el dorado para que pase el test.**
+Otra ruta al clon, con `FORMATEADOR_REFERENCIA`. Nada de esto corre en CI ni en
+la suite: los JSON ya están versionados.
+
+Siempre en un commit aparte, para que el diff del dorado se pueda revisar.
+
+### Cuando las dos implementaciones difieran
+
+La referencia está **congelada**: se consulta, no se modifica. Así que ya no se
+le puede aplicar una corrección, y la regla es:
+
+1. **Decidir cuál tiene razón.** El oráculo es la referencia, no la autoridad.
+2. Si tiene razón el port, se regenera el dorado y **el commit explica por qué
+   el valor nuevo es el correcto**. Un dorado que cambia sin esa explicación es
+   un test desactivado en silencio.
+3. Si tiene razón la referencia, se corrige el port.
+
+Lo que no se hace nunca es actualizar el dorado para que el test pase.
 
 ### Cuándo desaparece el Python
 
@@ -85,7 +100,8 @@ src/
     redondeo.ts     ✅ PORTADO — motor de redondeo, único sitio que redondea
     modelo.ts       ✅ Tipos del dominio
     valores.ts      ✅ PORTADO — interpretar una celda; regla de oro 3
-    mapeo.ts        ⬜ port de mapeo.py — qué columna es cuál
+    mapeo.ts        ✅ PORTADO — qué columna es cuál; restricción §4.0
+    similitud.ts    ✅ PORTADO — difflib.SequenceMatcher, exacto
 
   aplicacion/       Casos de uso y puertos. Depende del dominio, nada más.
     puertos.ts      ✅ Las interfaces del hexágono
@@ -128,15 +144,25 @@ Por dependencia y riesgo, igual que las fases del plan.
 |---|---|---|---|
 | 1 | ✅ `redondeo.ts` | `redondeo.py` | `test_redondeo.py` — **hecho** |
 | 2 | ✅ `valores.ts` | `valores.py` | `test_valores.py` — **hecho** |
-| 3 | `mapeo.ts` | `mapeo.py` | `test_mapeo.py` |
+| 3 | ✅ `mapeo.ts` + `similitud.ts` | `mapeo.py` | `test_mapeo.py` — **hecho** |
 | 4 | `plantilla-zip.ts` | `plantilla.py` | `test_plantilla.py` |
 | 5 | `lectura-exceljs.ts` | `lectura.py` | `test_lectura.py` |
 | 6 | `formatear-notas.ts` | `flujo.py` + `reporte.py` | `test_flujo.py` |
 | 7 | Adaptador web | `app.py` | — |
 
 Después de cada paso, el corpus se amplía con los casos de ese módulo y la
-prueba diferencial los cubre también. Hoy son **534 casos** en dos pares de
-archivos: 199 de redondeo y 335 de interpretación de celdas.
+prueba diferencial los cubre también. Hoy son **586 casos** en tres pares de
+archivos: 199 de redondeo, 335 de interpretación de celdas y 52 de mapeo.
+
+> **La coincidencia difusa se reimplementó, no se sustituyó.** `plan.md` §4.2
+> menciona `rapidfuzz`, pero la implementación de referencia nunca lo usó: usa
+> `difflib.SequenceMatcher`. Es una suerte, porque `difflib` es un algoritmo
+> fijo —Ratcliff-Obershelp— y no una heurística con parámetros, así que
+> `similitud.ts` lo reproduce exactamente y **los umbrales 0.90 / 0.78 / 0.08
+> siguen significando lo mismo**. No hubo recalibración. El diferencial de
+> mapeo compara los puntajes como doubles con igualdad exacta, sin tolerancia:
+> un algoritmo "casi igual" solo se notaría justo en la frontera, que es donde
+> se decide si una columna se elige sola o se pregunta.
 
 > **La prueba diferencial ya se ganó su costo.** Al portar `valores.ts`
 > encontró que `formatear("-0.0")` devolvía `"-0.0"` en Python y `"0.0"` en
@@ -155,7 +181,7 @@ archivos: 199 de redondeo y 335 de interpretación de celdas.
 | `decimal.Decimal` | `decimal.js` | `Number.toFixed()` falla en 20 de 50 casos de frontera. Prohibido |
 | `openpyxl` (leer) | `exceljs` | Fórmulas llegan como `{ formula, result }` — la doble lectura de §3.1 se conserva |
 | `openpyxl` (escribir) | `fflate` + parche XML | Más fiel que reabrir y guardar. Cierra `BL-07b` (ver `plantilla-zip.ts`) |
-| `rapidfuzz` | `fastest-levenshtein` | **No da el mismo puntaje.** Hay que recalibrar los umbrales de `mapeo.ts` |
+| `difflib.SequenceMatcher` | `src/dominio/similitud.ts` | Reimplementado, no sustituido. Ver abajo |
 | `csv` + `latin-1` | `TextDecoder` | Probar la misma cascada: utf-8-sig, utf-8, cp1252, latin-1 |
 | `unittest` | `vitest` | — |
 

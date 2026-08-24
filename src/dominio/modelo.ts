@@ -71,23 +71,30 @@ export interface Nota {
   readonly formatoCorregido: boolean;
 }
 
-export type Confianza = "alta" | "media" | "baja" | "sin_resolver";
+export type Confianza = "alta" | "media" | "nula";
 
+/** Una columna que podría ser el campo buscado, con por qué lo parece. */
 export interface Candidata {
-  readonly indice: number;
   readonly encabezado: string;
+  readonly indice: number;
   readonly puntaje: number;
+  readonly motivo: string;
 }
 
-/** Resultado del mapeo de una columna a un campo del dominio. Ver `mapeo.py`. */
+/**
+ * Resultado del mapeo para un campo. Ver `mapeo.ts`.
+ *
+ * `requiereConfirmacion` y `resuelto` son funciones en `mapeo.ts`, por la misma
+ * razón que en `Nota`: esto viaja hacia el reporte y la interfaz como objeto
+ * plano.
+ */
 export interface Asignacion {
   readonly campo: string;
-  readonly indice: number | null;
   readonly encabezado: string | null;
+  readonly indice: number | null;
   readonly confianza: Confianza;
-  readonly alternativas: readonly Candidata[];
-  /** §4.0: `nota_definitiva` siempre la confirma una persona. */
-  readonly requiereConfirmacion: boolean;
+  readonly candidatas: readonly Candidata[];
+  readonly motivo: string;
 }
 
 export interface FilaAnalizada {

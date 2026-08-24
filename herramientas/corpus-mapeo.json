@@ -1,0 +1,326 @@
+[
+  {
+    "encabezados": [
+      "nombre",
+      "codigo de estudiante",
+      "trabajos",
+      "quizes",
+      "examen",
+      "nota definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "Term Code",
+      "CRN",
+      "Course",
+      "Student ID",
+      "Full Name",
+      "Final Grade",
+      "Rolled",
+      "Confidential",
+      "Last Attended Date",
+      "Hours Attended",
+      "Incomplete Final Grade",
+      "Extension Date",
+      "Extension Date Constraints"
+    ]
+  },
+  {
+    "encabezados": []
+  },
+  {
+    "encabezados": [
+      "columna a",
+      "columna b"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "nota examen",
+      "nota parcial"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo de estudiante",
+      "examen"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "nota definitiva",
+      "definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo de estudiante",
+      "promedio"
+    ]
+  },
+  {
+    "encabezados": [
+      "Código de Estudiante",
+      "NOTA DEFINITIVA"
+    ]
+  },
+  {
+    "encabezados": [
+      "CODIGO_DE_ESTUDIANTE",
+      "Nota  Definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "nota_definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "Nota Definitva"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "notta definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "nta definitva"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "definitivas"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "calificacion definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "calificasion final"
+    ]
+  },
+  {
+    "encabezados": [
+      "id",
+      "nota"
+    ]
+  },
+  {
+    "encabezados": [
+      "no",
+      "total"
+    ]
+  },
+  {
+    "encabezados": [
+      "numero",
+      "final"
+    ]
+  },
+  {
+    "encabezados": [
+      "documento",
+      "promedio"
+    ]
+  },
+  {
+    "encabezados": [
+      "cedula",
+      "documento",
+      "nota final",
+      "nota definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "student id",
+      "final grade",
+      "definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo",
+      "nombre",
+      "nombres",
+      "nombre completo",
+      "definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "trabajos",
+      "quizes",
+      "examen",
+      "parcial",
+      "taller"
+    ]
+  },
+  {
+    "encabezados": [
+      "primer corte",
+      "segundo corte",
+      "tercer corte"
+    ]
+  },
+  {
+    "encabezados": [
+      "",
+      "   ",
+      "codigo",
+      "definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      null,
+      "codigo de estudiante",
+      "nota definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      1,
+      2.5,
+      "codigo",
+      "definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "   nota   definitiva   ",
+      "   codigo   "
+    ]
+  },
+  {
+    "encabezados": [
+      "!!!",
+      "???",
+      "codigo",
+      "definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo del estudiante matriculado",
+      "nota definitiva del curso"
+    ]
+  },
+  {
+    "encabezados": [
+      "identificacion",
+      "calificacion final del semestre"
+    ]
+  },
+  {
+    "encabezados": [
+      "nombre"
+    ]
+  },
+  {
+    "encabezados": [
+      "codigo de estudiante"
+    ]
+  },
+  {
+    "encabezados": [
+      "trabajos"
+    ]
+  },
+  {
+    "encabezados": [
+      "quizes"
+    ]
+  },
+  {
+    "encabezados": [
+      "examen"
+    ]
+  },
+  {
+    "encabezados": [
+      "nota definitiva"
+    ]
+  },
+  {
+    "encabezados": [
+      "Term Code"
+    ]
+  },
+  {
+    "encabezados": [
+      "CRN"
+    ]
+  },
+  {
+    "encabezados": [
+      "Course"
+    ]
+  },
+  {
+    "encabezados": [
+      "Student ID"
+    ]
+  },
+  {
+    "encabezados": [
+      "Full Name"
+    ]
+  },
+  {
+    "encabezados": [
+      "Final Grade"
+    ]
+  },
+  {
+    "encabezados": [
+      "Rolled"
+    ]
+  },
+  {
+    "encabezados": [
+      "Confidential"
+    ]
+  },
+  {
+    "encabezados": [
+      "Last Attended Date"
+    ]
+  },
+  {
+    "encabezados": [
+      "Hours Attended"
+    ]
+  },
+  {
+    "encabezados": [
+      "Incomplete Final Grade"
+    ]
+  },
+  {
+    "encabezados": [
+      "Extension Date"
+    ]
+  },
+  {
+    "encabezados": [
+      "Extension Date Constraints"
+    ]
+  }
+]
