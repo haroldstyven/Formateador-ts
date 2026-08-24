@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "_nota": "Tokens no numéricos que los docentes escriben en la columna de nota. Banner solo acepta valores entre 0.0 y 5.0, así que ninguno de estos puede subirse tal cual. La acción por defecto es 'preguntar' a propósito: no existe un reemplazo correcto que el software pueda elegir solo. Para fijar una política, cambie 'accion' a 'reemplazar' y agregue 'valor' — el cargador rechaza un 'reemplazar' sin valor. Acciones válidas: preguntar | reemplazar | dejar_vacio | descartar_fila.",
+  "politica_por_defecto": "preguntar",
+  "tokens": {
+    "np": { "accion": "preguntar", "etiqueta": "No presentó" },
+    "n/p": { "accion": "preguntar", "etiqueta": "No presentó" },
+    "null": { "accion": "preguntar", "etiqueta": "Nulo (exportado por otro sistema)" },
+    "none": { "accion": "preguntar", "etiqueta": "Nulo (exportado por otro sistema)" },
+    "na": { "accion": "preguntar", "etiqueta": "No aplica" },
+    "n/a": { "accion": "preguntar", "etiqueta": "No aplica" },
+    "-": { "accion": "preguntar", "etiqueta": "Guion: suele significar 'no presentó'" },
+    "--": { "accion": "preguntar", "etiqueta": "Guion doble" },
+    "retiro": { "accion": "preguntar", "etiqueta": "Retiro de la asignatura" },
+    "retirado": { "accion": "preguntar", "etiqueta": "Retiro de la asignatura" },
+    "cancelo": { "accion": "preguntar", "etiqueta": "Cancelación" },
+    "cancelado": { "accion": "preguntar", "etiqueta": "Cancelación" },
+    "i": { "accion": "preguntar", "etiqueta": "Incompleto" },
+    "inc": { "accion": "preguntar", "etiqueta": "Incompleto" },
+    "pendiente": { "accion": "preguntar", "etiqueta": "Pendiente" },
+    "homologacion": { "accion": "preguntar", "etiqueta": "Pendiente por homologación" },
+    "excusa": { "accion": "preguntar", "etiqueta": "Excusa" },
+    "no presento": { "accion": "preguntar", "etiqueta": "No presentó" },
+    "sin nota": { "accion": "preguntar", "etiqueta": "Sin calificar" },
+    "ver acta": { "accion": "preguntar", "etiqueta": "Remite a un acta" }
+  }
+}

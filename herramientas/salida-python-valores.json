@@ -1,0 +1,3017 @@
+[
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "formula_sin_calcular",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "formula_sin_calcular",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "1.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "2.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "5.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "1.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.1",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.2",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.4",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.6",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.7",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.8",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "5.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "5.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.3",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "2.9",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "ok",
+    "valor": "4.5",
+    "token": null,
+    "formato_corregido": true,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "redondeada",
+    "valor": "4.3",
+    "token": null,
+    "formato_corregido": true,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "0.1",
+    "token": null,
+    "formato_corregido": true,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "redondeada",
+    "valor": "3.0",
+    "token": null,
+    "formato_corregido": true,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": true
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "1,2345",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "1234,5",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "4,5,6",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.0",
+    "token": null,
+    "formato_corregido": true,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.5",
+    "token": null,
+    "formato_corregido": true,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "3.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "4.5",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "5.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "fuera_de_rango",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "fuera_de_rango",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "fuera_de_rango",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "fuera_de_rango",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "fuera_de_rango",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "fuera_de_rango",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "fuera_de_rango",
+    "valor": null,
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "ok",
+    "valor": "0.0",
+    "token": null,
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/p",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "none",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "na",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/a",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "-",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "--",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retiro",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retirado",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelo",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "i",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "inc",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "pendiente",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "homologacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "excusa",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "no presento",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "sin nota",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "ver acta",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "texto arbitrario",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "?",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "0,0,0",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/p",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "none",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "na",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/a",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "-",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "--",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retiro",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retirado",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelo",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "i",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "inc",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "pendiente",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "homologacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "excusa",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "no presento",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "sin nota",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "ver acta",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "texto arbitrario",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "?",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "0,0,0",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "sustituida",
+    "valor": "0.0",
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "sustituida",
+    "valor": "0.0",
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "sustituida",
+    "valor": "0.0",
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "sustituida",
+    "valor": "0.0",
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "sustituida",
+    "valor": "0.0",
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": true,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/p",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "none",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "na",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/a",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "-",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "--",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retiro",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retirado",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelo",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "i",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "inc",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "pendiente",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "homologacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "excusa",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "no presento",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "sin nota",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "ver acta",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "texto arbitrario",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "?",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "0,0,0",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "vacia",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/p",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "none",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "na",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/a",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "-",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "--",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retiro",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retirado",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelo",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "i",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "inc",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "pendiente",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "homologacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "excusa",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "no presento",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "sin nota",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "ver acta",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "texto arbitrario",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "?",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "0,0,0",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "descartada",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "descartada",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "descartada",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "descartada",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "descartada",
+    "valor": null,
+    "token": "np",
+    "formato_corregido": false,
+    "requiere_decision": false,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/p",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "null",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "none",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "na",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "n/a",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "-",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "--",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retiro",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "retirado",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelo",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "cancelacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "i",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "inc",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "pendiente",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "homologacion",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "excusa",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "no presento",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "sin nota",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "ver acta",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "texto arbitrario",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "?",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "0,0,0",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "true",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  },
+  {
+    "estado": "no_numerica",
+    "valor": null,
+    "token": "false",
+    "formato_corregido": false,
+    "requiere_decision": true,
+    "fue_modificada": false,
+    "tiene_valor_previo": false
+  }
+]

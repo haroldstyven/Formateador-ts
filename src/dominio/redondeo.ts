@@ -103,9 +103,15 @@ export function aDecimal(valor: unknown): Decimal {
  * Redondea a un decimal con ROUND_HALF_UP.
  *
  * Única implementación autorizada de redondeo en todo el proyecto.
+ *
+ * El cero negativo se normaliza a cero, y se hace explícito en vez de confiar
+ * en que la librería lo haga: "-0.0" no es una nota de la escala, y Excel lo
+ * produce solo. `enRango` lo acepta porque -0.0 == 0.0, así que sin esta línea
+ * puede llegar hasta la columna `Final Grade`.
  */
 export function redondear(valor: unknown): Decimal {
-  return aDecimal(valor).toDecimalPlaces(DECIMALES, MODO);
+  const redondeado = aDecimal(valor).toDecimalPlaces(DECIMALES, MODO);
+  return redondeado.isZero() ? redondeado.abs() : redondeado;
 }
 
 /**

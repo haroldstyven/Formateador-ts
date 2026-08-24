@@ -84,7 +84,7 @@ src/
   dominio/          Interior. Cero I/O, cero dependencias de framework.
     redondeo.ts     ✅ PORTADO — motor de redondeo, único sitio que redondea
     modelo.ts       ✅ Tipos del dominio
-    valores.ts      ⬜ port de valores.py — interpretar una celda
+    valores.ts      ✅ PORTADO — interpretar una celda; regla de oro 3
     mapeo.ts        ⬜ port de mapeo.py — qué columna es cuál
 
   aplicacion/       Casos de uso y puertos. Depende del dominio, nada más.
@@ -127,15 +127,26 @@ Por dependencia y riesgo, igual que las fases del plan.
 | # | Qué | De dónde | Tests a portar |
 |---|---|---|---|
 | 1 | ✅ `redondeo.ts` | `redondeo.py` | `test_redondeo.py` — **hecho** |
-| 2 | `valores.ts` | `valores.py` | `test_valores.py` |
+| 2 | ✅ `valores.ts` | `valores.py` | `test_valores.py` — **hecho** |
 | 3 | `mapeo.ts` | `mapeo.py` | `test_mapeo.py` |
 | 4 | `plantilla-zip.ts` | `plantilla.py` | `test_plantilla.py` |
 | 5 | `lectura-exceljs.ts` | `lectura.py` | `test_lectura.py` |
 | 6 | `formatear-notas.ts` | `flujo.py` + `reporte.py` | `test_flujo.py` |
 | 7 | Adaptador web | `app.py` | — |
 
-Después de cada paso, el corpus de `herramientas/corpus.json` se amplía con los
-casos de ese módulo y la prueba diferencial los cubre también.
+Después de cada paso, el corpus se amplía con los casos de ese módulo y la
+prueba diferencial los cubre también. Hoy son **534 casos** en dos pares de
+archivos: 199 de redondeo y 335 de interpretación de celdas.
+
+> **La prueba diferencial ya se ganó su costo.** Al portar `valores.ts`
+> encontró que `formatear("-0.0")` devolvía `"-0.0"` en Python y `"0.0"` en
+> TypeScript. El defecto era de la PoC: `Decimal` conserva el signo al
+> cuantizar, `enRango` acepta el valor porque `-0.0 == 0.0`, y Excel produce
+> ceros negativos por su cuenta — así que un `"-0.0"` podía llegar hasta la
+> columna `Final Grade`. Corregido en las dos implementaciones, con test.
+>
+> Es el caso que justifica la regla: **cuando las dos difieren, la pregunta es
+> cuál tiene razón, no cuál es el oráculo.**
 
 ## Equivalencias de dependencias
 

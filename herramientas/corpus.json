@@ -770,5 +770,29 @@
   {
     "tipo": "texto",
     "valor": "9.95"
+  },
+  {
+    "tipo": "texto",
+    "valor": "-0.0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "-0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "-0.00"
+  },
+  {
+    "tipo": "texto",
+    "valor": "-0.04"
+  },
+  {
+    "tipo": "texto",
+    "valor": "-0.1"
+  },
+  {
+    "tipo": "numero",
+    "valor": -0.0
   }
 ]

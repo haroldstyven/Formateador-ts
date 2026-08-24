@@ -8,16 +8,26 @@
 
 import type { Decimal } from "decimal.js";
 
-/** Estado en que quedó una celda de nota tras interpretarla. Ver `valores.py`. */
+/** Resultado de interpretar una celda de nota. Ver `valores.ts`. */
 export type Estado =
-  | "numerica"
+  /** Numérica, y ya venía con un decimal. */
+  | "ok"
+  /** Numérica; se ajustó a un decimal. Va al diff. */
+  | "redondeada"
+  /** Sin calificar. Nunca se rellena con ningún valor. */
   | "vacia"
+  /** Fórmula con el valor cacheado vacío (§3.1). Recuperable con Ctrl+S. */
   | "formula_sin_calcular"
+  /** Token pendiente de decisión humana. */
+  | "no_numerica"
   | "fuera_de_rango"
-  | "token_no_numerico";
+  /** Decisión del docente aplicada y registrada. */
+  | "sustituida"
+  /** La fila se excluye, por decisión registrada. */
+  | "descartada";
 
-/** Qué hacer con un valor no numérico. Por defecto: preguntar. */
-export type Accion = "preguntar" | "sustituir" | "omitir_fila";
+/** Qué hacer con un token no numérico. Por defecto: preguntar. */
+export type Accion = "preguntar" | "reemplazar" | "dejar_vacio" | "descartar_fila";
 
 /** Una celda leída del archivo, con su rastro de origen. Ver `lectura.py`. */
 export interface Celda {
@@ -38,14 +48,27 @@ export interface Tabla {
   readonly filaDelEncabezado: number;
 }
 
-/** Una nota interpretada. `valor` solo existe si el estado es `numerica`. */
+/**
+ * Una celda de nota ya interpretada, lista para el reporte o el escritor.
+ *
+ * `valor` es `null` en todos los estados que no producen nota: `vacia`,
+ * `no_numerica`, `fuera_de_rango`, `formula_sin_calcular` y `descartada`. Esa
+ * es la regla de oro 3 expresada en el tipo — no hay forma de construir una
+ * `Nota` bloqueada que además traiga un número.
+ *
+ * `requiereDecision` y `fueModificada` son funciones en `valores.ts`, no
+ * propiedades: así la `Nota` sigue siendo un objeto plano y serializable, que
+ * es lo que cruza la frontera hacia el reporte y hacia la interfaz.
+ */
 export interface Nota {
-  readonly celda: Celda;
-  readonly estado: Estado;
+  readonly original: string;
   readonly valor: Decimal | null;
-  readonly textoOriginal: string;
-  readonly requiereDecision: boolean;
-  readonly motivo: string | null;
+  readonly estado: Estado;
+  readonly detalle: string;
+  readonly token: string | null;
+  readonly valorPrevio: Decimal | null;
+  /** Una coma cambiada por punto: no altera el valor, pero va al diff (regla 4). */
+  readonly formatoCorregido: boolean;
 }
 
 export type Confianza = "alta" | "media" | "baja" | "sin_resolver";

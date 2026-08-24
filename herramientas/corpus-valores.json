@@ -1,0 +1,2012 @@
+[
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": null,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "   ",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "\t",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "\n  \t",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": null,
+    "formula": true
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.5",
+    "formula": true
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.1",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.2",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.3",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.4",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.6",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.7",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.8",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.9",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.1",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.2",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.3",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.4",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.6",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.7",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.8",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.9",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.1",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.2",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.3",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.4",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.6",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.7",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.8",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.9",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.1",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.2",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.3",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.4",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.6",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.7",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.8",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.9",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.1",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.2",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.3",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.4",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.6",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.7",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.8",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.9",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "5.0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.05",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.05,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.15",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.15,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.25",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.25,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.35",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.35,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.45",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.45,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.55",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.55,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.65",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.65,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.75",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.75,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.85",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.85,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0.95",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 0.95,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.05",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.05,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.15",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.15,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.25",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.25,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.35",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.35,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.45",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.45,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.55",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.55,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.65",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.65,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.75",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.75,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.85",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.85,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.95",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 1.95,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.05",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.05,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.15",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.15,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.25",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.25,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.35",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.35,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.45",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.45,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.55",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.55,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.65",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.65,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.75",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.75,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.85",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.85,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.95",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.95,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.05",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.05,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.15",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.15,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.25",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.25,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.35",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.35,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.45",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.45,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.55",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.55,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.65",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.65,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.75",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.75,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.85",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.85,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.95",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.95,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.05",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.05,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.15",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.15,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.25",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.25,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.35",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.35,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.45",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.45,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.55",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.55,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.65",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.65,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.75",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.75,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.85",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.85,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.95",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.95,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.283333333333333",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 4.283333333333333,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.9666666666666668",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 3.966666666666667,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2.9499999999999997",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": 2.9499999999999997,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4,5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4,25",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0,05",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "2,95",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1,234.5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "1.234,5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4,5,6",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4,",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": ",5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.50",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "3.",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": ".5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "+4.5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": " 4.5 ",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "4.5e0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "45e-1",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "5",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "85",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "5.1",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "-1",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "100",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "-0.05",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "5.05",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "9.95",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "-0.0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "-0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "-0.00",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "numero",
+    "valor": -0.0,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "NP",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "np",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "N.P.",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": " Np ",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "n.p.",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "N/P",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "null",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "NULL",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "None",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "NA",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "N/A",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "-",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "--",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "retiro",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "Retirado",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "cancelo",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "Cancelación",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "I",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "INC",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "pendiente",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "homologación",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "excusa",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "No Presentó",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "sin nota",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "ver acta",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "texto arbitrario",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "?",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "texto",
+    "valor": "0,0,0",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "NP",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "np",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "N.P.",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": " Np ",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "n.p.",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "N/P",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "null",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "NULL",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "None",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "NA",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "N/A",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "-",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "--",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "retiro",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "Retirado",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "cancelo",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "Cancelación",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "I",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "INC",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "pendiente",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "homologación",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "excusa",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "No Presentó",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "sin nota",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "ver acta",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "texto arbitrario",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "?",
+    "formula": false
+  },
+  {
+    "config": "repo",
+    "tipo": "texto",
+    "valor": "0,0,0",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "NP",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "np",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "N.P.",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": " Np ",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "n.p.",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "N/P",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "null",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "NULL",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "None",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "NA",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "N/A",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "-",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "--",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "retiro",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "Retirado",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "cancelo",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "Cancelación",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "I",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "INC",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "pendiente",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "homologación",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "excusa",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "No Presentó",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "sin nota",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "ver acta",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "texto arbitrario",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "?",
+    "formula": false
+  },
+  {
+    "config": "np_reemplazo",
+    "tipo": "texto",
+    "valor": "0,0,0",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "NP",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "np",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "N.P.",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": " Np ",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "n.p.",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "N/P",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "null",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "NULL",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "None",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "NA",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "N/A",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "-",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "--",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "retiro",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "Retirado",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "cancelo",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "Cancelación",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "I",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "INC",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "pendiente",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "homologación",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "excusa",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "No Presentó",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "sin nota",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "ver acta",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "texto arbitrario",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "?",
+    "formula": false
+  },
+  {
+    "config": "np_dejar_vacio",
+    "tipo": "texto",
+    "valor": "0,0,0",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "NP",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "np",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "N.P.",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": " Np ",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "n.p.",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "N/P",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "null",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "NULL",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "None",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "NA",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "N/A",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "-",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "--",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "retiro",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "Retirado",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "cancelo",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "Cancelación",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "I",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "INC",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "pendiente",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "homologación",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "excusa",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "No Presentó",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "sin nota",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "ver acta",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "texto arbitrario",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "?",
+    "formula": false
+  },
+  {
+    "config": "np_descartar",
+    "tipo": "texto",
+    "valor": "0,0,0",
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "crudo",
+    "valor": true,
+    "formula": false
+  },
+  {
+    "config": "vacia",
+    "tipo": "crudo",
+    "valor": false,
+    "formula": false
+  }
+]

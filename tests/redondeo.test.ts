@@ -152,6 +152,23 @@ describe("formato de salida", () => {
       expect(salida).toMatch(/^\d+\.\d$/);
     }
   });
+
+  it("el cero negativo se normaliza", () => {
+    // "-0.0" no es una nota de la escala, y Excel lo produce solo. `enRango`
+    // lo acepta porque -0.0 == 0.0, así que sin normalizar llegaba hasta la
+    // columna Final Grade. Lo detectó la prueba diferencial contra Python.
+    for (const entrada of ["-0.0", "-0", "-0.00", "-0.04", -0]) {
+      expect(formatear(entrada), String(entrada)).toBe("0.0");
+    }
+  });
+
+  it("los negativos de verdad conservan el signo", () => {
+    // La normalización toca el cero, no el resto. Fuera de rango lo bloquea
+    // otra capa; aquí solo se comprueba que el redondeo no borre un signo.
+    expect(formatear("-0.1")).toBe("-0.1");
+    expect(formatear("-0.05")).toBe("-0.1");
+    expect(formatear("-1.5")).toBe("-1.5");
+  });
 });
 
 describe("entradas inválidas", () => {
