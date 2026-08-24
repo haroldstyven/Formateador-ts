@@ -1,0 +1,32 @@
+name: CI
+
+# Incluye la prueba diferencial contra el oráculo Python, que aquí corre sin
+# necesitar Python: compara contra `herramientas/salida-python.json`, el archivo
+# dorado versionado. Ver `tests/oraculo.test.ts`.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  suite:
+    name: Typecheck y suite
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      # Incluye el barrido de los 50 valores de frontera (regla de oro 1) y la
+      # prueba diferencial sobre los 193 casos del corpus.
+      - name: Suite
+        run: npm test

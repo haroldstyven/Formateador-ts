@@ -1,0 +1,8 @@
+node_modules/
+.next/
+dist/
+coverage/
+*.tsbuildinfo
+
+# herramientas/salida-python.json SÍ se versiona: es el archivo dorado del
+# oráculo, y sin él la prueba diferencial no puede correr. Ver tests/oraculo.test.ts

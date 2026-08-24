@@ -1,0 +1,774 @@
+[
+  {
+    "tipo": "texto",
+    "valor": "0.05"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.05
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.15"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.15
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.25"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.25
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.35"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.35
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.45"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.45
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.55"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.55
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.65"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.65
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.75"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.75
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.85"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.85
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.95"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.95
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.05"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.05
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.15"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.15
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.25"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.25
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.35"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.35
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.45"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.45
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.55"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.55
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.65"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.65
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.75"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.75
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.85"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.85
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.95"
+  },
+  {
+    "tipo": "numero",
+    "valor": 1.95
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.05"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.05
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.15"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.15
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.25"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.25
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.35"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.35
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.45"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.45
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.55"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.55
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.65"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.65
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.75"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.75
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.85"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.85
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.95"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.95
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.05"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.05
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.15"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.15
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.25"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.25
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.35"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.35
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.45"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.45
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.55"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.55
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.65"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.65
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.75"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.75
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.85"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.85
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.95"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.95
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.05"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.05
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.15"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.15
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.25"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.25
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.35"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.35
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.45"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.45
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.55"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.55
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.65"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.65
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.75"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.75
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.85"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.85
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.95"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.95
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.1"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.2"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.3"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.4"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.6"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.7"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.8"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.9"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.1"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.2"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.3"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.4"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.6"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.7"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.8"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1.9"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.1"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.2"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.3"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.4"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.6"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.7"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.8"
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.9"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.1"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.2"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.3"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.4"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.6"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.7"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.8"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.9"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.1"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.2"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.3"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.4"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.6"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.7"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.8"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.9"
+  },
+  {
+    "tipo": "texto",
+    "valor": "5.0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.283333333333333"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.283333333333333
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.9666666666666668"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.966666666666667
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.9499999999999997"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.9499999999999997
+  },
+  {
+    "tipo": "texto",
+    "valor": "2.9500000000000002"
+  },
+  {
+    "tipo": "numero",
+    "valor": 2.95
+  },
+  {
+    "tipo": "texto",
+    "valor": "0.049999999999999996"
+  },
+  {
+    "tipo": "numero",
+    "valor": 0.049999999999999996
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.9500000000000002"
+  },
+  {
+    "tipo": "numero",
+    "valor": 4.95
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.0000000000000004"
+  },
+  {
+    "tipo": "numero",
+    "valor": 3.0000000000000004
+  },
+  {
+    "tipo": "texto",
+    "valor": "0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3"
+  },
+  {
+    "tipo": "texto",
+    "valor": "5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3."
+  },
+  {
+    "tipo": "texto",
+    "valor": ".5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "+4.5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.50"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.5000"
+  },
+  {
+    "tipo": "texto",
+    "valor": " 4.5 "
+  },
+  {
+    "tipo": "texto",
+    "valor": "4.5e0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "45e-1"
+  },
+  {
+    "tipo": "texto",
+    "valor": ""
+  },
+  {
+    "tipo": "texto",
+    "valor": "  "
+  },
+  {
+    "tipo": "texto",
+    "valor": "NP"
+  },
+  {
+    "tipo": "texto",
+    "valor": "4,5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "nan"
+  },
+  {
+    "tipo": "texto",
+    "valor": "inf"
+  },
+  {
+    "tipo": "texto",
+    "valor": "-inf"
+  },
+  {
+    "tipo": "texto",
+    "valor": "1_0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "0x1f"
+  },
+  {
+    "tipo": "texto",
+    "valor": "ver acta"
+  },
+  {
+    "tipo": "texto",
+    "valor": "N/A"
+  },
+  {
+    "tipo": "texto",
+    "valor": "--"
+  },
+  {
+    "tipo": "texto",
+    "valor": "3.0.0"
+  },
+  {
+    "tipo": "texto",
+    "valor": "-0.05"
+  },
+  {
+    "tipo": "texto",
+    "valor": "-1.5"
+  },
+  {
+    "tipo": "texto",
+    "valor": "5.05"
+  },
+  {
+    "tipo": "texto",
+    "valor": "9.95"
+  }
+]

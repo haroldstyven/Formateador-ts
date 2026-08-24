@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "paths": {
+      "@dominio/*": ["./src/dominio/*"],
+      "@aplicacion/*": ["./src/aplicacion/*"],
+      "@adaptadores/*": ["./src/adaptadores/*"]
+    }
+  },
+  "include": ["src", "tests", "herramientas"]
+}
