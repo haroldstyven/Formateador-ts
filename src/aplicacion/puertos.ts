@@ -9,6 +9,7 @@
  */
 
 import type { Analisis, Bloqueo, Cambio, Tabla } from "@dominio/modelo.ts";
+import type { FilaPlantilla } from "@dominio/plantilla.ts";
 
 /** Un archivo que entró al sistema, sin suponer de dónde vino. */
 export interface ArchivoEntrante {
@@ -24,13 +25,15 @@ export interface LectorDeArchivos {
   esPlantillaBanner(archivo: ArchivoEntrante): Promise<boolean>;
 }
 
-/** Una fila de la plantilla oficial de Banner. */
-export interface FilaPlantilla {
-  readonly fila: number;
-  readonly studentId: string;
-  readonly finalGrade: string | null;
-  readonly rolled: boolean;
-}
+/**
+ * Una fila de la plantilla oficial de Banner.
+ *
+ * El tipo lo define el dominio y el puerto solo lo reexporta. Tener dos
+ * versiones del mismo concepto —una aquí y otra en `dominio/plantilla.ts`— fue
+ * un error del esqueleto inicial, y el typecheck lo cazó en cuanto el adaptador
+ * tuvo que satisfacer las dos a la vez.
+ */
+export type { FilaPlantilla } from "@dominio/plantilla.ts";
 
 /** Puerto de plantilla. Adaptador: `adaptadores/salida/plantilla-zip.ts`. */
 export interface RepositorioDePlantilla {

@@ -70,6 +70,8 @@ from formateador.mapeo import (  # noqa: E402
     mapear,
     puntaje_encabezado,
 )
+from openpyxl import load_workbook  # noqa: E402
+
 from formateador.lectura import Tabla  # noqa: E402
 from formateador.flujo import Analisis, FilaAnalizada  # noqa: E402
 from formateador.plantilla import (  # noqa: E402
@@ -535,11 +537,112 @@ def evaluar_plantilla(casos: list[dict[str, object]]) -> list[dict[str, object]]
     return resultados
 
 
+# --------------------------------------------------------------------------
+# Modulo `plantilla-io`: leer y escribir el .xlsx.
+#
+# AQUI EL DIFERENCIAL NO PUEDE COMPARAR BYTES, y es a proposito. El adaptador
+# TypeScript no reabre el libro: parchea el XML dentro del zip, que es la
+# solucion que plan.md 2.2 dejo escrita para el caso BL-07b. El objetivo
+# declarado es producir bytes DISTINTOS de los de openpyxl, y mas fieles al
+# original.
+#
+# Lo que si tiene que coincidir es el contenido: la plantilla leida, y las
+# celdas que se leen de vuelta del archivo generado. Si las dos
+# implementaciones producen la misma tabla de datos, la diferencia de
+# contenedor es exactamente la mejora que se buscaba.
+# --------------------------------------------------------------------------
+
+CORPUS_PLANTILLA_IO = AQUI / "corpus-plantilla-io.json"
+
+FIXTURE = AQUI.parent / "tests" / "fixtures" / "Template_Anonimo.xlsx"
+
+
+def generar_corpus_plantilla_io() -> list[dict[str, object]]:
+    """Cada caso es una nota a escribir en todo el curso, o un cargue parcial."""
+    return [
+        {"nota": None, "cuantos": 0},        # solo lectura, sin escribir
+        {"nota": "4.25", "cuantos": None},   # None = todos
+        {"nota": "2.95", "cuantos": None},
+        {"nota": "3", "cuantos": None},
+        {"nota": "0.05", "cuantos": None},
+        {"nota": "5", "cuantos": None},
+        {"nota": "4,5", "cuantos": None},
+        {"nota": "3.5", "cuantos": 5},       # parcial, con forzar
+        {"nota": "3.5", "cuantos": 1},
+    ]
+
+
+def evaluar_plantilla_io(casos: list[dict[str, object]]) -> list[dict[str, object]]:
+    import tempfile
+
+    from formateador.plantilla import escribir_en_plantilla, leer_plantilla
+
+    resultados: list[dict[str, object]] = []
+    plantilla = leer_plantilla(FIXTURE)
+
+    lectura = {
+        "hoja": plantilla.esquema.hoja,
+        "columnas": list(plantilla.columnas),
+        "curso": plantilla.curso,
+        "periodo": plantilla.periodo,
+        "crn": plantilla.crn,
+        "filas": [
+            {
+                "fila": f.fila,
+                "identificador": f.identificador,
+                "nombre": f.nombre,
+                "rolled": f.rolled,
+                "confidencial": f.confidencial,
+                "nota_existente": f.nota_existente,
+            }
+            for f in plantilla.filas
+        ],
+    }
+
+    for caso in casos:
+        if caso["nota"] is None:
+            resultados.append({"lectura": lectura, "celdas": None})
+            continue
+
+        cuantos = caso["cuantos"]
+        filas_plantilla = (
+            plantilla.filas if cuantos is None else plantilla.filas[: int(cuantos)]  # type: ignore[arg-type]
+        )
+        filas = [
+            _fila(i + 1, f.identificador, caso["nota"])
+            for i, f in enumerate(filas_plantilla)
+        ]
+        cruce = cruzar(_analisis(filas), plantilla)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            destino = Path(tmp) / "salida.xlsx"
+            escribir_en_plantilla(cruce, destino, forzar=True)
+            libro = load_workbook(destino, data_only=True)
+            hoja = libro[plantilla.esquema.hoja]
+            celdas = [
+                [
+                    "" if hoja.cell(row=r, column=c).value is None
+                    else str(hoja.cell(row=r, column=c).value)
+                    for c in range(1, hoja.max_column + 1)
+                ]
+                for r in range(1, hoja.max_row + 1)
+            ]
+
+        resultados.append({"lectura": lectura, "celdas": celdas})
+
+    return resultados
+
+
 MODULOS = {
     "redondeo": (CORPUS, generar_corpus, evaluar),
     "valores": (CORPUS_VALORES, generar_corpus_valores, evaluar_valores),
     "mapeo": (CORPUS_MAPEO, generar_corpus_mapeo, evaluar_mapeo),
     "plantilla": (CORPUS_PLANTILLA, generar_corpus_plantilla, evaluar_plantilla),
+    "plantilla-io": (
+        CORPUS_PLANTILLA_IO,
+        generar_corpus_plantilla_io,
+        evaluar_plantilla_io,
+    ),
 }
 
 

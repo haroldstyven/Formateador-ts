@@ -13,7 +13,8 @@
  *   redondeo   (corpus.json / salida-python.json, sin sufijo por ser el primero)
  *   valores    interpretación de una celda
  *   mapeo      qué columna es cuál, con los puntajes de difflib
- *   plantilla  el cruce por identificador
+ *   plantilla     el cruce por identificador
+ *   plantilla-io  leer el .xlsx y escribir Final Grade
  *
  * Cómo se regeneran (solo al ampliar un corpus, y siempre en un commit aparte
  * para que el diff se pueda revisar) — con `herramientas/oraculo.py`, que es de
@@ -58,14 +59,28 @@ import {
 import {
   type FilaPlantilla,
   type Plantilla,
+  crn as crnDe,
   cruzar,
+  curso as cursoDe,
   esquemaDesdeObjeto,
   motivosDeBloqueo,
   notaTexto,
+  periodo as periodoDe,
   puedeGenerarCruce,
   sobrescribenNota,
 } from "@dominio/plantilla.ts";
 import type { Analisis, FilaAnalizada } from "@dominio/modelo.ts";
+import type { ArchivoEntrante } from "@aplicacion/puertos.ts";
+import {
+  escribirEnPlantilla,
+  leerPlantilla,
+} from "@adaptadores/salida/plantilla-zip.ts";
+import {
+  abrir as abrirOoxml,
+  columnaDeIndice as columnaDeIndiceOoxml,
+  leerHoja as leerHojaOoxml,
+  valor as valorOoxml,
+} from "@adaptadores/salida/ooxml.ts";
 
 const RAIZ = fileURLToPath(new URL("..", import.meta.url));
 
@@ -490,6 +505,136 @@ describe("plantilla · diferencial contra el oráculo Python", () => {
       const a = JSON.stringify(obtenido);
       const b = JSON.stringify(esperado);
       if (a !== b) divergencias.push(`[${i}] python=${b}\n     ts=${a}`);
+    });
+
+    exigirCoincidencia(divergencias);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Módulo plantilla-io — leer y escribir el .xlsx
+//
+// AQUÍ EL DIFERENCIAL NO COMPARA BYTES, y es a propósito. El adaptador no
+// reabre el libro: parchea el XML dentro del zip, que es la solución que
+// `plan.md` §2.2 dejó escrita para el caso `BL-07b`. El objetivo declarado es
+// producir bytes DISTINTOS de los de openpyxl, y más fieles al original.
+//
+// Lo que sí tiene que coincidir es el contenido: la plantilla leída, y las
+// celdas que se leen de vuelta del archivo generado. Si las dos
+// implementaciones producen la misma tabla de datos, la diferencia de
+// contenedor es exactamente la mejora que se buscaba — y de que sea una mejora
+// se encarga la suite del adaptador, comparando parte por parte contra el
+// original.
+// ---------------------------------------------------------------------------
+
+interface CasoPlantillaIo {
+  nota: string | null;
+  cuantos: number | null;
+}
+
+interface FilaLeida {
+  fila: number;
+  identificador: string;
+  nombre: string;
+  rolled: boolean;
+  confidencial: boolean;
+  nota_existente: string;
+}
+
+interface ResultadoPlantillaIo {
+  lectura: {
+    hoja: string;
+    columnas: string[];
+    curso: string;
+    periodo: string;
+    crn: string;
+    filas: FilaLeida[];
+  };
+  celdas: string[][] | null;
+}
+
+describe("plantilla-io · diferencial contra el oráculo Python", () => {
+  const corpus = leerJson<CasoPlantillaIo[]>("herramientas/corpus-plantilla-io.json");
+  const dorado = leerJson<ResultadoPlantillaIo[]>(
+    "herramientas/salida-python-plantilla-io.json",
+  );
+
+  const original: ArchivoEntrante = {
+    nombre: "Template_Anonimo.xlsx",
+    bytes: new Uint8Array(readFileSync(`${RAIZ}tests/fixtures/Template_Anonimo.xlsx`)),
+  };
+  const plantilla = leerPlantilla(original);
+
+  it("el corpus y el archivo dorado tienen el mismo tamaño", () => {
+    expect(dorado).toHaveLength(corpus.length);
+  });
+
+  it("la plantilla leída coincide con la de Python", () => {
+    const esperado = dorado[0]!.lectura;
+    expect(plantilla.esquema.hoja).toBe(esperado.hoja);
+    expect([...plantilla.columnas.keys()]).toEqual(esperado.columnas);
+    expect(cursoDe(plantilla)).toBe(esperado.curso);
+    expect(periodoDe(plantilla)).toBe(esperado.periodo);
+    expect(crnDe(plantilla)).toBe(esperado.crn);
+
+    const filas: FilaLeida[] = plantilla.filas.map((f) => ({
+      fila: f.fila,
+      identificador: f.identificador,
+      nombre: f.nombre,
+      rolled: f.rolled,
+      confidencial: f.confidencial,
+      nota_existente: f.notaExistente,
+    }));
+    expect(filas).toEqual(esperado.filas);
+  });
+
+  it("las celdas del archivo generado coinciden con las de Python", () => {
+    const divergencias: string[] = [];
+
+    corpus.forEach((caso, i) => {
+      const esperado = dorado[i]!.celdas;
+      if (caso.nota === null || esperado === null) return;
+
+      const cuantas = caso.cuantos === null ? plantilla.filas.length : caso.cuantos;
+      const filas: FilaAnalizada[] = plantilla.filas.slice(0, cuantas).map((f, k) => ({
+        numero: k + 1,
+        codigo: f.identificador,
+        nombre: f.nombre,
+        nota: interpretar(caso.nota),
+        problemas: [],
+        avisos: [],
+      }));
+
+      const analisis: Analisis = {
+        tabla: {
+          encabezados: [],
+          filas: [],
+          hoja: "",
+          filaEncabezado: 0,
+          incidencias: [],
+          origen: "notas.xlsx",
+        },
+        mapa: new Map(),
+        indiceNota: 0,
+        filas,
+      };
+
+      const bytes = escribirEnPlantilla(original, cruzar(analisis, plantilla), {
+        forzar: true,
+      });
+      const hoja = leerHojaOoxml(abrirOoxml(bytes));
+
+      esperado.forEach((filaEsperada, r) => {
+        filaEsperada.forEach((celdaEsperada, c) => {
+          const obtenida = valorOoxml(hoja, r + 1, columnaDeIndiceOoxml(c + 1));
+          if (obtenida !== celdaEsperada) {
+            divergencias.push(
+              `[${i}] nota=${caso.nota} celda=${columnaDeIndiceOoxml(c + 1)}${r + 1} ` +
+                `python=${JSON.stringify(celdaEsperada)} ts=${JSON.stringify(obtenida)}`,
+            );
+          }
+        });
+      });
     });
 
     exigirCoincidencia(divergencias);

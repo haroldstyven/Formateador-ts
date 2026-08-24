@@ -115,8 +115,9 @@ src/
 
   adaptadores/
     salida/
+      ooxml.ts            ✅ zip + XML: leer una hoja y cambiar una celda
+      plantilla-zip.ts    ✅ PORTADO — la plantilla de Banner, sin reabrir el libro
       lectura-exceljs.ts  ⬜ port de lectura.py
-      plantilla-zip.ts    ⬜ port de plantilla.py
     entrada/
       (web)         ⬜ Next.js App Router
       (cli)         ⬜ port de formatear.py
@@ -152,15 +153,31 @@ Por dependencia y riesgo, igual que las fases del plan.
 | 2 | ✅ `valores.ts` | `valores.py` | `test_valores.py` — **hecho** |
 | 3 | ✅ `mapeo.ts` + `similitud.ts` | `mapeo.py` | `test_mapeo.py` — **hecho** |
 | 4a | ✅ `plantilla.ts` + `analisis.ts` | `plantilla.py` (parte pura) | `test_plantilla.py` — cruce **hecho** |
-| 4b | `plantilla-zip.ts` | `plantilla.py` (I/O) | lectura y escritura del `.xlsx` |
+| 4b | ✅ `plantilla-zip.ts` + `ooxml.ts` | `plantilla.py` (I/O) | `test_plantilla.py` — I/O **hecho** |
 | 5 | `lectura-exceljs.ts` | `lectura.py` | `test_lectura.py` |
 | 6 | `formatear-notas.ts` | `flujo.py` + `reporte.py` | `test_flujo.py` |
 | 7 | Adaptador web | `app.py` | — |
 
 Después de cada paso, el corpus se amplía con los casos de ese módulo y la
-prueba diferencial los cubre también. Hoy son **607 casos** en cuatro pares de
-archivos: 199 de redondeo, 335 de interpretación de celdas, 52 de mapeo y 21
-del cruce por identificador.
+prueba diferencial los cubre también. Hoy son **616 casos** en cinco pares de
+archivos: 199 de redondeo, 335 de interpretación de celdas, 52 de mapeo, 21 del
+cruce por identificador y 9 de lectura y escritura del `.xlsx`.
+
+> **`BL-07b` deja de estar pendiente.** `plan.md` §2.2 anotó que guardar con
+> `openpyxl` no reproduce el archivo byte a byte —se pierde la cadena vacía de
+> `Hours Attended`, las cadenas compartidas se reescriben en línea— y dejó la
+> solución escrita sin implementarla: parchear el XML dentro del zip. En
+> TypeScript sale más barata que evitarla, así que `ooxml.ts` la implementa. De
+> las once partes del paquete **solo cambian dos**, la hoja y la tabla de
+> cadenas, y hay un test que lo comprueba parte por parte.
+>
+> Por eso el diferencial de `plantilla-io` **no compara bytes**: el objetivo
+> declarado es producir bytes distintos de los de `openpyxl`. Compara el
+> contenido —la plantilla leída y las celdas del archivo generado—, y de que la
+> diferencia sea una mejora se encarga la suite del adaptador.
+>
+> Lo que esto **no** resuelve: `BL-05` y `BL-07` siguen abiertos. Ser más fiel
+> que la referencia no es lo mismo que estar verificado contra Banner.
 
 > **La coincidencia difusa se reimplementó, no se sustituyó.** `plan.md` §4.2
 > menciona `rapidfuzz`, pero la implementación de referencia nunca lo usó: usa
@@ -188,7 +205,7 @@ del cruce por identificador.
 |---|---|---|
 | `decimal.Decimal` | `decimal.js` | `Number.toFixed()` falla en 20 de 50 casos de frontera. Prohibido |
 | `openpyxl` (leer) | `exceljs` | Fórmulas llegan como `{ formula, result }` — la doble lectura de §3.1 se conserva |
-| `openpyxl` (escribir) | `fflate` + parche XML | Más fiel que reabrir y guardar. Cierra `BL-07b` (ver `plantilla-zip.ts`) |
+| `openpyxl` (escribir) | `fflate` + parche XML | ✅ Hecho. Más fiel que reabrir y guardar: cierra `BL-07b` |
 | `difflib.SequenceMatcher` | `src/dominio/similitud.ts` | Reimplementado, no sustituido. Ver abajo |
 | `csv` + `latin-1` | `TextDecoder` | Probar la misma cascada: utf-8-sig, utf-8, cp1252, latin-1 |
 | `unittest` | `vitest` | — |
