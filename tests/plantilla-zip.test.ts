@@ -332,14 +332,19 @@ describe("fidelidad del contenedor · caso BL-07b", () => {
 describe("el puerto RepositorioDePlantilla", () => {
   const repositorio = new PlantillaZip();
 
-  it("leer devuelve las filas del listado", async () => {
-    const filas = await repositorio.leer(ORIGINAL);
-    expect(filas).toHaveLength(12);
-    expect(filas[0]!.identificador).toBeTruthy();
+  it("leer devuelve la plantilla entera, no solo sus filas", async () => {
+    // El cruce necesita además el esquema, el mapa de columnas y los datos de
+    // control del curso; devolver solo las filas era una interfaz insuficiente.
+    const plantilla = await repositorio.leer(ORIGINAL);
+    expect(plantilla.filas).toHaveLength(12);
+    expect(plantilla.filas[0]!.identificador).toBeTruthy();
+    expect(plantilla.esquema.hoja).toBe("Grades");
+    expect(plantilla.columnas.has("Final Grade")).toBe(true);
+    expect(crn(plantilla)).toBeTruthy();
   });
 
   it("escribirFinalGrade escribe solo los identificadores que recibe", async () => {
-    const filas = await repositorio.leer(ORIGINAL);
+    const { filas } = await repositorio.leer(ORIGINAL);
     const notas = new Map([[filas[0]!.identificador, "3.7"]]);
     const bytes = await repositorio.escribirFinalGrade(ORIGINAL, notas);
     const hoja = leerHoja(abrir(bytes));

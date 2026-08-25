@@ -1,0 +1,257 @@
+[
+  {
+    "archivo": "curso-completo.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-completo.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-completo.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-completo.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-completo.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-con-np.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-con-np.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-con-np.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-con-np.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-con-np.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-incompleto.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-incompleto.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-incompleto.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-incompleto.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "curso-incompleto.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "duplicado.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "duplicado.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "duplicado.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "duplicado.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "duplicado.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "formula-sin-calcular.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "formula-sin-calcular.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "formula-sin-calcular.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "formula-sin-calcular.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "formula-sin-calcular.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "fuera-de-rango.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "fuera-de-rango.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "fuera-de-rango.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "fuera-de-rango.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "fuera-de-rango.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "limpio.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "limpio.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "limpio.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "limpio.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "limpio.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "np.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "np.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "np.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "np.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "np.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "sin-codigo.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "sin-codigo.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "sin-codigo.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "sin-codigo.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "sin-codigo.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "todo-junto.xlsx",
+    "config": "vacia",
+    "indice_nota": null
+  },
+  {
+    "archivo": "todo-junto.xlsx",
+    "config": "repo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "todo-junto.xlsx",
+    "config": "np_reemplazo",
+    "indice_nota": null
+  },
+  {
+    "archivo": "todo-junto.xlsx",
+    "config": "np_dejar_vacio",
+    "indice_nota": null
+  },
+  {
+    "archivo": "todo-junto.xlsx",
+    "config": "np_descartar",
+    "indice_nota": null
+  },
+  {
+    "archivo": "limpio.xlsx",
+    "config": "vacia",
+    "indice_nota": 4
+  }
+]

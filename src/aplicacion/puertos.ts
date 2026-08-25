@@ -9,7 +9,9 @@
  */
 
 import type { Analisis, Bloqueo, Cambio, Tabla } from "@dominio/modelo.ts";
-import type { FilaPlantilla } from "@dominio/plantilla.ts";
+import type { EsquemaBanner, Plantilla } from "@dominio/plantilla.ts";
+import type { CatalogoAlias } from "@dominio/mapeo.ts";
+import type { ConfigValores } from "@dominio/valores.ts";
 
 /** Un archivo que entró al sistema, sin suponer de dónde vino. */
 export interface ArchivoEntrante {
@@ -35,9 +37,16 @@ export interface LectorDeArchivos {
  */
 export type { FilaPlantilla } from "@dominio/plantilla.ts";
 
-/** Puerto de plantilla. Adaptador: `adaptadores/salida/plantilla-zip.ts`. */
+/**
+ * Puerto de plantilla. Adaptador: `adaptadores/salida/plantilla-zip.ts`.
+ *
+ * `leer` devuelve la `Plantilla` entera y no solo sus filas: el cruce necesita
+ * además el esquema, el mapa de columnas y los datos de control del curso. El
+ * esqueleto inicial devolvía solo las filas, y con el caso de uso escrito quedó
+ * claro que era una interfaz insuficiente.
+ */
 export interface RepositorioDePlantilla {
-  leer(archivo: ArchivoEntrante): Promise<readonly FilaPlantilla[]>;
+  leer(archivo: ArchivoEntrante): Promise<Plantilla>;
   /**
    * Escribe ÚNICAMENTE la columna `Final Grade` sobre la plantilla original y
    * devuelve los bytes del archivo de cargue. Las otras doce columnas y el
@@ -49,11 +58,17 @@ export interface RepositorioDePlantilla {
   ): Promise<Uint8Array>;
 }
 
-/** Puerto de configuración: `config/alias_columnas.json`, etc. */
+/**
+ * Puerto de configuración: de dónde salen `config/*.json`.
+ *
+ * Devuelve objetos ya construidos, no JSON crudo: parsear es trabajo del
+ * adaptador, y validar la política es trabajo del dominio (`ConfigValores`
+ * rechaza una configuración peligrosa al construirse, §0.3.1).
+ */
 export interface Configuracion {
-  aliasDeColumnas(): Promise<unknown>;
-  valoresNoNumericos(): Promise<unknown>;
-  esquemaBanner(): Promise<unknown>;
+  catalogoDeAlias(): Promise<CatalogoAlias>;
+  valoresNoNumericos(): Promise<ConfigValores>;
+  esquemaBanner(): Promise<EsquemaBanner>;
 }
 
 /**

@@ -3,9 +3,9 @@
 Migración del núcleo determinista a Next.js + TypeScript sobre arquitectura
 hexagonal, que es el stack de la organización.
 
-**Estado:** portados el dominio completo y los dos adaptadores de archivos —
-redondeo, valores, mapeo, el cruce, la escritura de la plantilla de Banner y el
-lector tolerante. Falta orquestarlo todo (`flujo`) y la interfaz.
+**Estado:** el hexágono está completo. Del archivo del docente al `.xlsx` de
+cargue, con su reporte, pasando por lector, mapeo, interpretación, cruce y
+escritura. Lo único que falta es la interfaz.
 
 ```bash
 npm install
@@ -110,16 +110,19 @@ src/
     analisis.ts     ✅ PORTADO — predicados derivados sobre el análisis
     celda.ts        ✅ PORTADO — qué se puede decir de una celda (§3.1, §3.2)
     tabla.ts        ✅ PORTADO — de matriz de celdas a tabla con encabezados
+    flujo.ts        ✅ PORTADO — análisis fila por fila; código ausente y duplicado
+    reporte.ts      ✅ PORTADO — el diff y las reglas de oro sobre datos reales
 
   aplicacion/       Casos de uso y puertos. Depende del dominio, nada más.
     puertos.ts      ✅ Las interfaces del hexágono
-    formatear-notas.ts  ⬜ port de flujo.py + reporte.py
+    formatear-notas.ts  ✅ El caso de uso: de bytes a bytes
 
   adaptadores/
     salida/
       ooxml.ts            ✅ zip + XML: leer una hoja y cambiar una celda
       plantilla-zip.ts    ✅ PORTADO — la plantilla de Banner, sin reabrir el libro
       lectura-xlsx.ts     ✅ PORTADO — lector tolerante de .xlsx y .csv
+      configuracion-json.ts ✅ De dónde salen config/*.json
     entrada/
       (web)         ⬜ Next.js App Router
       (cli)         ⬜ port de formatear.py
@@ -157,13 +160,19 @@ Por dependencia y riesgo, igual que las fases del plan.
 | 4a | ✅ `plantilla.ts` + `analisis.ts` | `plantilla.py` (parte pura) | `test_plantilla.py` — cruce **hecho** |
 | 4b | ✅ `plantilla-zip.ts` + `ooxml.ts` | `plantilla.py` (I/O) | `test_plantilla.py` — I/O **hecho** |
 | 5 | ✅ `lectura-xlsx.ts` + `celda.ts` + `tabla.ts` | `lectura.py` | `test_lectura.py` — **hecho** |
-| 6 | `formatear-notas.ts` | `flujo.py` + `reporte.py` | `test_flujo.py` |
+| 6 | ✅ `flujo.ts` + `reporte.ts` + el caso de uso | `flujo.py` + `reporte.py` | `test_flujo.py` — **hecho** |
 | 7 | Adaptador web | `app.py` | — |
 
 Después de cada paso, el corpus se amplía con los casos de ese módulo y la
-prueba diferencial los cubre también. Hoy son **636 casos** en seis pares de
+prueba diferencial los cubre también. Hoy son **687 casos** en siete pares de
 archivos: 199 de redondeo, 335 de interpretación de celdas, 52 de mapeo, 21 del
-cruce por identificador, 9 de escritura del `.xlsx` y 20 del lector tolerante.
+cruce por identificador, 9 de escritura del `.xlsx`, 20 del lector tolerante y
+51 del análisis completo con su reporte.
+
+El de `flujo` compara **el reporte entero, incluida su prosa**. Ahí sí se puede:
+sus mensajes no interpolan decimales con el formato del lenguaje —lo que el
+docente lee sale de `formatear`, que es el mismo texto que va a quedar en
+Banner— así que la igualdad literal es alcanzable y vale la pena tenerla.
 
 ### Cuando la divergencia es del lenguaje, no de la decisión
 

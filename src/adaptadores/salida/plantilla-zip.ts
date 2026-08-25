@@ -253,8 +253,8 @@ export function esPlantillaBanner(
 export class PlantillaZip implements RepositorioDePlantilla {
   constructor(private readonly opciones: OpcionesPlantilla = {}) {}
 
-  async leer(archivo: ArchivoEntrante): Promise<readonly FilaPlantilla[]> {
-    return leerPlantilla(archivo, this.opciones).filas;
+  async leer(archivo: ArchivoEntrante): Promise<Plantilla> {
+    return leerPlantilla(archivo, this.opciones);
   }
 
   async escribirFinalGrade(

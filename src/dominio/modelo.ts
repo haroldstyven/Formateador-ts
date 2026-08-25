@@ -133,19 +133,28 @@ export interface Analisis {
   readonly filas: readonly FilaAnalizada[];
 }
 
-/** Una modificación que el docente tiene que poder ver (regla de oro 4). */
+/** Una modificación concreta, con su antes y su después (regla de oro 4). */
 export interface Cambio {
   readonly fila: number;
-  readonly codigo: string | null;
+  readonly codigo: string;
+  readonly nombre: string;
   readonly antes: string;
   readonly despues: string;
-  readonly motivo: "redondeo" | "separador_decimal" | "sustitucion_autorizada";
+  readonly motivo: string;
 }
 
-/** Algo que impide generar el archivo hasta que una persona decida. */
+/**
+ * Una fila que impide generar el archivo, y por qué.
+ *
+ * El mismo tipo sirve para los descartes: una fila excluida por decisión del
+ * docente no bloquea, pero tiene que aparecer igual. La regla de oro 2 exige
+ * que ninguna fila desaparezca en silencio.
+ */
 export interface Bloqueo {
   readonly fila: number;
-  readonly codigo: string | null;
-  readonly estado: Estado;
-  readonly mensaje: string;
+  readonly codigo: string;
+  readonly nombre: string;
+  readonly valor: string;
+  readonly estado: string;
+  readonly motivo: string;
 }

@@ -842,6 +842,159 @@ def evaluar_lectura(casos: list[dict[str, object]]) -> list[dict[str, object]]:
     return resultados
 
 
+# --------------------------------------------------------------------------
+# Modulo `flujo`: analisis fila por fila y reporte.
+#
+# Se evalua sobre las fixtures de `tests/fixtures/flujo/`, con varias
+# configuraciones de valores no numericos, porque la decision del docente sobre
+# un token cambia si el archivo se puede generar o no.
+#
+# `generado` no se compara: es una marca de tiempo.
+# --------------------------------------------------------------------------
+
+CORPUS_FLUJO = AQUI / "corpus-flujo.json"
+
+FIXTURES_FLUJO = AQUI.parent / "tests" / "fixtures" / "flujo"
+
+
+def generar_fixtures_flujo() -> list[str]:
+    from openpyxl import Workbook
+
+    from formateador.plantilla import leer_plantilla
+
+    FIXTURES_FLUJO.mkdir(parents=True, exist_ok=True)
+    escritos: list[str] = []
+
+    def archivo(nombre, filas, encabezados=None):
+        libro = Workbook()
+        hoja = libro.active
+        hoja.append(encabezados or ENCABEZADOS)
+        for fila in filas:
+            hoja.append(fila)
+        libro.save(FIXTURES_FLUJO / nombre)
+        escritos.append(nombre)
+
+    archivo("limpio.xlsx", [
+        ["Ana Munoz", "0012345", 4.0, 4.5, 4.2, 4.283333],
+        ["Luis Pena", "0012346", 3.0, 2.8, 3.1, 2.95],
+        ["Sara Diaz", "0012347", 3.5, 3.5, 3.5, 3.5],
+    ])
+    archivo("np.xlsx", [
+        ["Ana", "0012345", 4.0, 4.0, 4.0, 4.5],
+        ["Luis", "0012346", None, None, None, "NP"],
+        ["Sara", "0012347", None, None, None, "NP"],
+    ])
+    archivo("duplicado.xlsx", [
+        ["Ana", "0012345", 4.0, 4.0, 4.0, 4.5],
+        ["Otra Ana", "0012345", 4.0, 4.0, 4.0, 3.0],
+        ["Luis", "0012346", 4.0, 4.0, 4.0, 3.5],
+    ])
+    archivo("sin-codigo.xlsx", [
+        ["Ana", "0012345", 4.0, 4.0, 4.0, 4.5],
+        ["Fantasma", None, 4.0, 4.0, 4.0, 3.0],
+    ])
+    archivo("fuera-de-rango.xlsx", [["Ana", "0012345", None, None, None, 85]])
+    archivo("formula-sin-calcular.xlsx", [
+        ["Ana", "0012345", 4.0, 4.5, 4.2, "=AVERAGE(C2:E2)"],
+    ])
+    # Un curso completo con los identificadores REALES del ejemplar anonimizado:
+    # inventarlos aqui probaria el cruce contra datos ficticios.
+    plantilla = leer_plantilla(FIXTURE)
+    ids = [f.identificador for f in plantilla.filas]
+
+    archivo("curso-completo.xlsx", [
+        [f"Estudiante {i:03d}", ident, 4.0, 4.0, 4.0, 4.25]
+        for i, ident in enumerate(ids, 1)
+    ])
+    archivo("curso-incompleto.xlsx", [
+        [f"Estudiante {i:03d}", ident, 4.0, 4.0, 4.0, 3.5]
+        for i, ident in enumerate(ids[:-2], 1)
+    ])
+    archivo("curso-con-np.xlsx", [
+        [f"Estudiante {i:03d}", ident, 4.0, 4.0, 4.0, "NP" if i == 2 else 3.5]
+        for i, ident in enumerate(ids, 1)
+    ])
+
+    archivo("todo-junto.xlsx", [
+        ["Ana", "0012345", 4.0, 4.5, 4.2, 4.25],
+        ["Luis", "0012346", 3.0, 2.8, 3.1, "NP"],
+        ["Sara", "0012347", 3.5, 3.5, 3.5, "4,5"],
+        ["Juan", "0012345", 3.0, 3.0, 3.0, 3.0],
+        ["Nadie", None, 1.0, 1.0, 1.0, 1.0],
+        ["Pedro", "0012348", None, None, None, None],
+    ])
+
+    return escritos
+
+
+def generar_corpus_flujo() -> list[dict[str, object]]:
+    configs = ["vacia", "repo", "np_reemplazo", "np_dejar_vacio", "np_descartar"]
+    casos: list[dict[str, object]] = []
+    for nombre in sorted(p.name for p in FIXTURES_FLUJO.iterdir() if p.is_file()):
+        for config in configs:
+            casos.append({"archivo": nombre, "config": config, "indice_nota": None})
+    # La columna forzada por el docente: elegir 'examen' a proposito, que es
+    # justo el error que 4.0 existe para impedir cuando NO lo pide una persona.
+    casos.append({"archivo": "limpio.xlsx", "config": "vacia", "indice_nota": 4})
+    return casos
+
+
+def evaluar_flujo(casos: list[dict[str, object]]) -> list[dict[str, object]]:
+    from formateador.flujo import MapeoIncompleto, analizar
+    from formateador.lectura import leer as leer_archivo
+    from formateador.reporte import Reporte
+
+    catalogo = CatalogoAlias.desde_json(AQUI.parent / "config" / "alias_columnas.json")
+    configs = _configs()
+    resultados: list[dict[str, object]] = []
+
+    for caso in casos:
+        ruta = FIXTURES_FLUJO / str(caso["archivo"])
+        tabla = leer_archivo(ruta, catalogo)
+        try:
+            analisis = analizar(
+                tabla,
+                configs[str(caso["config"])],
+                catalogo=catalogo,
+                indice_nota=caso["indice_nota"],
+            )
+        except MapeoIncompleto as exc:
+            resultados.append({"error": "MapeoIncompleto", "reporte": None})
+            continue
+
+        reporte = Reporte(analisis)
+        datos = reporte.a_dict()
+        datos.pop("generado")
+
+        resultados.append(
+            {
+                "error": None,
+                "reporte": datos,
+                "filas": [
+                    {
+                        "numero": f.numero,
+                        "codigo": f.codigo,
+                        "nombre": f.nombre,
+                        "estado": f.nota.estado.value,
+                        "nota": None if f.nota.valor is None else f"{f.nota.valor:.1f}",
+                        "bloquea": f.bloquea,
+                        "motivo_bloqueo": f.motivo_bloqueo,
+                        "problemas": list(f.problemas),
+                        "avisos": list(f.avisos),
+                    }
+                    for f in analisis.filas
+                ],
+                "pendientes_por_token": {
+                    token: [f.numero for f in filas]
+                    for token, filas in analisis.pendientes_por_token().items()
+                },
+                "texto": reporte.a_texto(),
+            }
+        )
+
+    return resultados
+
+
 MODULOS = {
     "redondeo": (CORPUS, generar_corpus, evaluar),
     "valores": (CORPUS_VALORES, generar_corpus_valores, evaluar_valores),
@@ -853,6 +1006,7 @@ MODULOS = {
         evaluar_plantilla_io,
     ),
     "lectura": (CORPUS_LECTURA, generar_corpus_lectura, evaluar_lectura),
+    "flujo": (CORPUS_FLUJO, generar_corpus_flujo, evaluar_flujo),
 }
 
 
@@ -875,10 +1029,16 @@ def main() -> int:
     corpus, generar, evaluador = MODULOS[args.modulo]
 
     if args.generar_fixtures:
-        if args.modulo != "lectura":
-            print("--generar-fixtures solo aplica a --modulo lectura", file=sys.stderr)
+        generadores = {"lectura": generar_fixtures, "flujo": generar_fixtures_flujo}
+        generador = generadores.get(args.modulo)
+        if generador is None:
+            print(
+                "--generar-fixtures solo aplica a los modulos "
+                f"{sorted(generadores)}",
+                file=sys.stderr,
+            )
             return 1
-        for nombre in generar_fixtures():
+        for nombre in generador():
             print(f"  + {nombre}", file=sys.stderr)
         return 0
 

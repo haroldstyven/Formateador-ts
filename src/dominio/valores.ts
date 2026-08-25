@@ -26,7 +26,7 @@
 import { Decimal } from "decimal.js";
 
 import type { Accion, Estado, Nota } from "./modelo.ts";
-import { ValorNoDecimal, aDecimal, enRango, redondear } from "./redondeo.ts";
+import { ValorNoDecimal, aDecimal, enRango, formatear, redondear } from "./redondeo.ts";
 
 const ESPACIOS = /\s+/g;
 
@@ -283,8 +283,11 @@ export function interpretar(
     valor: redondeada,
     estado: "redondeada",
     valorPrevio: valor,
+    // La nota redondeada va con `formatear`: es el texto que quedará en Banner,
+    // y decimal.js imprimiría "3" donde el docente tiene que leer "3.0". El
+    // valor de partida sí va tal cual, porque es lo que él escribió.
     detalle:
-      `${detallePrevio}Se redondeó ${valor.toString()} a ${redondeada.toString()}.`.trim(),
+      `${detallePrevio}Se redondeó ${valor.toString()} a ${formatear(redondeada)}.`.trim(),
     formatoCorregido,
   });
 }
@@ -307,7 +310,10 @@ function tokenNoNumerico(
       estado: "sustituida",
       token,
       detalle:
-        `'${original}' se reemplazó por ${decision.valor?.toString()} ` +
+        // `formatear` y no `toString`: es una nota, y una nota se muestra
+        // siempre con su decimal. decimal.js imprimiría "0" donde el docente
+        // tiene que leer "0.0" — el mismo texto que va a quedar en Banner.
+        `'${original}' se reemplazó por ${formatear(decision.valor)} ` +
         "por decisión registrada.",
     });
   }

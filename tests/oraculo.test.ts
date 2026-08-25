@@ -16,6 +16,7 @@
  *   plantilla     el cruce por identificador
  *   plantilla-io  leer el .xlsx y escribir Final Grade
  *   lectura       el lector tolerante del archivo del docente
+ *   flujo         el análisis fila por fila y el reporte
  *
  * Cómo se regeneran (solo al ampliar un corpus, y siempre en un commit aparte
  * para que el diff se pueda revisar) — con `herramientas/oraculo.py`, que es de
@@ -79,6 +80,9 @@ import {
   vacia as celdaVacia,
 } from "@dominio/celda.ts";
 import { SinEncabezado } from "@dominio/tabla.ts";
+import { analizar } from "@dominio/flujo.ts";
+import { bloquea, motivoBloqueo, pendientesPorToken } from "@dominio/analisis.ts";
+import { construirReporte, reporteATexto } from "@dominio/reporte.ts";
 import {
   ArchivoNoSoportado,
   leer as leerArchivo,
@@ -834,5 +838,123 @@ describe("lectura · diferencial contra el oráculo Python", () => {
     });
 
     exigirCoincidencia(divergencias, "lectura");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Módulo flujo — el análisis fila por fila y el reporte
+//
+// Es el corpus que cierra el círculo: cada caso recorre lector, mapeo,
+// interpretación, validaciones de fila y reporte, sobre las mismas fixtures y
+// con las mismas configuraciones de valores no numéricos que la referencia.
+//
+// Se compara el reporte entero, incluida su prosa. Aquí sí se puede: los
+// mensajes de `flujo` y `reporte` no interpolan decimales con formato de
+// lenguaje —`despues` sale de `formatear`, que es el texto que va a Banner— así
+// que la igualdad literal es alcanzable y vale la pena tenerla.
+//
+// `generado` no se compara: es una marca de tiempo.
+// ---------------------------------------------------------------------------
+
+interface CasoFlujo {
+  archivo: string;
+  config: string;
+  indice_nota: number | null;
+}
+
+interface FilaDorada {
+  numero: number;
+  codigo: string;
+  nombre: string;
+  estado: string;
+  nota: string | null;
+  bloquea: boolean;
+  motivo_bloqueo: string;
+  problemas: string[];
+  avisos: string[];
+}
+
+interface ResultadoFlujo {
+  error: string | null;
+  reporte: Record<string, unknown> | null;
+  filas?: FilaDorada[];
+  pendientes_por_token?: Record<string, number[]>;
+  texto?: string;
+}
+
+describe("flujo · diferencial contra el oráculo Python", () => {
+  const corpus = leerJson<CasoFlujo[]>("herramientas/corpus-flujo.json");
+  const dorado = leerJson<ResultadoFlujo[]>("herramientas/salida-python-flujo.json");
+  const catalogo = CatalogoAlias.desdeObjeto(
+    leerJson<unknown>("config/alias_columnas.json"),
+  );
+
+  it("el corpus y el archivo dorado tienen el mismo tamaño", () => {
+    expect(dorado).toHaveLength(corpus.length);
+    expect(corpus.length).toBeGreaterThan(0);
+  });
+
+  it("el corpus ejercita los dos desenlaces", () => {
+    expect(dorado.some((r) => r.reporte?.puede_generar === true)).toBe(true);
+    expect(dorado.some((r) => r.reporte?.puede_generar === false)).toBe(true);
+  });
+
+  it("TypeScript y Python coinciden en el 100% de los casos", () => {
+    const configs = configuraciones();
+    const divergencias: string[] = [];
+
+    corpus.forEach((caso, i) => {
+      const esperado = dorado[i]!;
+      const etiqueta = `[${caso.archivo}/${caso.config}/nota=${caso.indice_nota}]`;
+
+      const archivo: ArchivoEntrante = {
+        nombre: caso.archivo,
+        bytes: new Uint8Array(
+          readFileSync(`${RAIZ}tests/fixtures/flujo/${caso.archivo}`),
+        ),
+      };
+
+      const tabla = leerArchivo(archivo, catalogo);
+      const analisis = analizar(tabla, catalogo, {
+        config: configs[caso.config]!,
+        ...(caso.indice_nota !== null ? { indiceNota: caso.indice_nota } : {}),
+      });
+
+      const reporte = construirReporte(analisis, { generado: "" });
+      const { generado: _descartado, ...sinGenerado } = reporte;
+
+      const anota = (campo: string, py: unknown, ts: unknown) => {
+        if (JSON.stringify(py) !== JSON.stringify(ts)) {
+          divergencias.push(
+            `${etiqueta} ${campo}:\n    python=${JSON.stringify(py)}\n    ts=${JSON.stringify(ts)}`,
+          );
+        }
+      };
+
+      anota("reporte", esperado.reporte, sinGenerado);
+
+      const filas: FilaDorada[] = analisis.filas.map((f) => ({
+        numero: f.numero,
+        codigo: f.codigo,
+        nombre: f.nombre,
+        estado: f.nota.estado,
+        nota: f.nota.valor === null ? null : f.nota.valor.toFixed(1),
+        bloquea: bloquea(f),
+        motivo_bloqueo: motivoBloqueo(f),
+        problemas: [...f.problemas],
+        avisos: [...f.avisos],
+      }));
+      anota("filas", esperado.filas, filas);
+
+      const pendientes: Record<string, number[]> = {};
+      for (const [token, deEsteToken] of pendientesPorToken(analisis)) {
+        pendientes[token] = deEsteToken.map((f) => f.numero);
+      }
+      anota("pendientes_por_token", esperado.pendientes_por_token, pendientes);
+
+      anota("texto", esperado.texto, reporteATexto(analisis));
+    });
+
+    exigirCoincidencia(divergencias, "flujo");
   });
 });
