@@ -1,0 +1,318 @@
+/*
+ * Tokens del design system institucional (`branding.md` en el repositorio de
+ * referencia). Viven aquí y no dispersos por los componentes: la marca cambia
+ * en un sitio o no cambia.
+ */
+
+:root {
+  /* Primary */
+  --primary: #0a41f5;
+  --primary-dark: #1435d9;
+  --primary-medium: #5969ee;
+  --primary-light: #c0c7fa;
+  --primary-bg: #f0f2ff;
+
+  /* Secondary — el navy institucional */
+  --navy: #05174a;
+  --navy-medium: #3d476d;
+
+  /* Neutral */
+  --neutral: #64748b;
+  --placeholder: #7c879f;
+
+  /* Fondos */
+  --fondo: #d9e1f8;
+  --tarjeta: #e8edfc;
+  --superficie: #f1f4ff;
+  --blanco: #ffffff;
+
+  /* Estados */
+  --exito: #22a06b;
+  --aviso: #e9a23b;
+  --error: #c8321e;
+
+  --radio: 6px;
+  --radio-grande: 12px;
+
+  /*
+   * Geist se declara pero NO se descarga de un CDN. Traerla contradiría la
+   * única promesa que la herramienta le hace al docente en pantalla: que nada
+   * sale de su computador. Si está instalada en la máquina, se usa; si no,
+   * degrada a las sans del sistema.
+   */
+  --tipografia: "Geist", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--tipografia);
+  background: var(--fondo);
+  color: var(--navy-medium);
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+h2 {
+  font-size: 1.15rem;
+}
+h3 {
+  font-size: 1rem;
+}
+
+.pagina {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.cabecera {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.cabecera p {
+  margin: 0;
+  color: var(--neutral);
+  font-size: 0.9rem;
+}
+
+.tarjeta {
+  background: var(--blanco);
+  border-radius: var(--radio-grande);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--primary-light);
+}
+
+/* Botones */
+.boton {
+  font: inherit;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radio);
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--blanco);
+}
+
+.boton:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.boton:disabled {
+  background: var(--primary-light);
+  color: var(--superficie);
+  cursor: not-allowed;
+}
+
+.boton.secundario {
+  background: #e0e6fa;
+  color: var(--navy);
+}
+
+.boton.secundario:hover:not(:disabled) {
+  background: var(--primary-light);
+}
+
+/*
+ * Alertas. El texto va en el navy institucional, no en el color del estado:
+ * verde #22A06B o ámbar #E9A23B sobre sus propios tintes no alcanzan contraste
+ * cómodo de lectura. El color se conserva en el borde (principio 04).
+ */
+.alerta {
+  border-left: 4px solid var(--neutral);
+  background: var(--superficie);
+  color: var(--navy);
+  border-radius: var(--radio);
+  padding: 0.85rem 1rem;
+  margin: 0.75rem 0;
+  font-size: 0.92rem;
+}
+
+.alerta.exito {
+  border-left-color: var(--exito);
+}
+.alerta.aviso {
+  border-left-color: var(--aviso);
+}
+.alerta.error {
+  border-left-color: var(--error);
+}
+.alerta.info {
+  border-left-color: var(--primary);
+}
+
+/* Zona de carga */
+.zona {
+  border: 2px dashed var(--primary-light);
+  border-radius: var(--radio-grande);
+  background: var(--superficie);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.zona:hover,
+.zona.encima {
+  border-color: var(--primary);
+  background: var(--primary-bg);
+}
+
+.zona strong {
+  color: var(--navy);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.zona span {
+  color: var(--placeholder);
+  font-size: 0.88rem;
+}
+
+.zona input {
+  display: none;
+}
+
+/* Tablas del diff */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--primary-light);
+}
+
+th {
+  color: var(--neutral);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+td.antes {
+  color: var(--neutral);
+}
+
+td.despues {
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.tabla-scroll {
+  overflow-x: auto;
+}
+
+/* Detalles plegables: lo que nadie necesita abrir para terminar su trabajo */
+details {
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--primary-light);
+  padding-top: 0.75rem;
+}
+
+summary {
+  cursor: pointer;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+details > *:not(summary) {
+  margin-top: 0.75rem;
+}
+
+code,
+.mono {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.88em;
+}
+
+ol.pasos {
+  padding-left: 1.25rem;
+}
+
+ol.pasos li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--primary);
+}
+
+.muestra {
+  display: inline-flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.muestra span {
+  background: var(--primary-bg);
+  border-radius: var(--radio);
+  padding: 0.15rem 0.5rem;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+select {
+  font: inherit;
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--radio);
+  border: 1px solid var(--primary-light);
+  background: var(--blanco);
+  color: var(--navy);
+  max-width: 100%;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.resumen {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.resumen li {
+  font-size: 0.85rem;
+  color: var(--neutral);
+}
+
+.resumen b {
+  display: block;
+  font-size: 1.35rem;
+  color: var(--navy);
+  font-weight: 500;
+}

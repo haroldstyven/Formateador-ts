@@ -26,7 +26,12 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
-      # Incluye el barrido de los 50 valores de frontera (regla de oro 1) y la
-      # prueba diferencial sobre los 193 casos del corpus.
+      # Incluye el barrido de los 50 valores de frontera (regla de oro 1), la
+      # prueba diferencial contra el oráculo y los tests de arquitectura.
       - name: Suite
         run: npm test
+
+      # La aplicación se exporta estática. Que el build pase es parte del
+      # contrato: si dejara de exportarse, habría un servidor recibiendo notas.
+      - name: Build estático
+        run: npm run build

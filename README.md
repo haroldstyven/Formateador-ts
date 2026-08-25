@@ -3,15 +3,20 @@
 Migración del núcleo determinista a Next.js + TypeScript sobre arquitectura
 hexagonal, que es el stack de la organización.
 
-**Estado:** el hexágono está completo. Del archivo del docente al `.xlsx` de
-cargue, con su reporte, pasando por lector, mapeo, interpretación, cruce y
-escritura. Lo único que falta es la interfaz.
+**Estado:** el port está completo, interfaz incluida. Del archivo del docente al
+`.xlsx` de cargue, con su reporte y su guía, **procesándolo todo en el navegador**.
 
 ```bash
 npm install
+npm run dev       # la aplicación en http://localhost:3000
 npm test          # suite TypeScript + prueba diferencial contra Python
 npm run typecheck
+npm run build     # exportación estática a out/
 ```
+
+> **Lo único que queda abierto es la Fase 1 del plan**, y no es código: nadie ha
+> comprobado todavía que Banner acepte un archivo generado por la herramienta.
+> Harold lo probará cuando tenga acceso de docente.
 
 ---
 
@@ -124,7 +129,7 @@ src/
       lectura-xlsx.ts     ✅ PORTADO — lector tolerante de .xlsx y .csv
       configuracion-json.ts ✅ De dónde salen config/*.json
     entrada/
-      (web)         ⬜ Next.js App Router
+      web/          ✅ Next.js, y TODO el procesamiento ocurre aquí
       (cli)         ⬜ port de formatear.py
 ```
 
@@ -143,8 +148,15 @@ El mismo caso de uso corre en tres sitios sin cambiar una línea del dominio:
 | Route handler | Servidor Next.js | Si algún día hace falta procesar del lado servidor |
 | CLI | Terminal | Reproduce `formatear.py` para depurar un archivo rechazado |
 
-`exceljs` y `decimal.js` funcionan en el navegador. Empezar por el adaptador
-cliente conserva la respuesta a la pregunta abierta #2 del plan.
+**Y así se construyó.** El adaptador web es un componente cliente y la
+aplicación se exporta estática: no hay servidor que reciba notas, así que no hay
+sitio donde puedan quedarse. La promesa que la pantalla le hace al docente —
+*"ningún dato sale de tu computador"*— es literal, no una intención.
+
+`tests/arquitectura.test.ts` la sostiene: falla si algo en la cadena que llega
+al componente cliente importa una API de Node, si el dominio importa un
+adaptador, o si la aplicación deja de exportarse estática. Son cosas revisables
+a ojo, y por eso mismo se escapan en una revisión apurada.
 
 ---
 
@@ -161,7 +173,7 @@ Por dependencia y riesgo, igual que las fases del plan.
 | 4b | ✅ `plantilla-zip.ts` + `ooxml.ts` | `plantilla.py` (I/O) | `test_plantilla.py` — I/O **hecho** |
 | 5 | ✅ `lectura-xlsx.ts` + `celda.ts` + `tabla.ts` | `lectura.py` | `test_lectura.py` — **hecho** |
 | 6 | ✅ `flujo.ts` + `reporte.ts` + el caso de uso | `flujo.py` + `reporte.py` | `test_flujo.py` — **hecho** |
-| 7 | Adaptador web | `app.py` | — |
+| 7 | ✅ Adaptador web | `app.py` | `tests/arquitectura.test.ts` — **hecho** |
 
 Después de cada paso, el corpus se amplía con los casos de ese módulo y la
 prueba diferencial los cubre también. Hoy son **687 casos** en siete pares de
