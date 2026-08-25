@@ -1,0 +1,62 @@
+[
+  {
+    "archivo": "basico.xlsx"
+  },
+  {
+    "archivo": "columnas-fantasma.xlsx"
+  },
+  {
+    "archivo": "coma.csv"
+  },
+  {
+    "archivo": "combinadas.xlsx"
+  },
+  {
+    "archivo": "comillas.csv"
+  },
+  {
+    "archivo": "encabezado-fila-4.xlsx"
+  },
+  {
+    "archivo": "formato-dos-decimales.xlsx"
+  },
+  {
+    "archivo": "formato-general.xlsx"
+  },
+  {
+    "archivo": "formato-texto.xlsx"
+  },
+  {
+    "archivo": "formato-un-decimal.xlsx"
+  },
+  {
+    "archivo": "formulas.xlsx"
+  },
+  {
+    "archivo": "huecos.xlsx"
+  },
+  {
+    "archivo": "latin1.csv"
+  },
+  {
+    "archivo": "punto-y-coma.csv"
+  },
+  {
+    "archivo": "resumen.xlsx"
+  },
+  {
+    "archivo": "sin-encabezado.xlsx"
+  },
+  {
+    "archivo": "tabulador.txt"
+  },
+  {
+    "archivo": "tres-hojas.xlsx"
+  },
+  {
+    "archivo": "utf8-bom.csv"
+  },
+  {
+    "archivo": "valores-raros.xlsx"
+  }
+]

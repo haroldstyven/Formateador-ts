@@ -1,0 +1,2019 @@
+[
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Notas",
+      "fila_encabezado": 1,
+      "incidencias": [],
+      "filas": [
+        [
+          {
+            "texto": "Ana Munoz",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ],
+        [
+          {
+            "texto": "Luis Pena",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012346",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "3",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.0"
+          },
+          {
+            "texto": "2.8",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "2.8"
+          },
+          {
+            "texto": "3.1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.1"
+          },
+          {
+            "texto": "2.95",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "3.0"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 1,
+      "incidencias": [],
+      "filas": [
+        [
+          {
+            "texto": "Ana Munoz",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "codigo de estudiante",
+        "nota definitiva"
+      ],
+      "hoja": "coma.csv",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "Archivo de texto leído con delimitador ','."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "codigo de estudiante",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 2,
+      "incidencias": [
+        "Los encabezados no estaban en la primera fila, sino en la fila 2."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "codigo de estudiante",
+        "nombre",
+        "nota definitiva"
+      ],
+      "hoja": "comillas.csv",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "Archivo de texto leído con delimitador ';'."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "Munoz; Ana",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Notas",
+      "fila_encabezado": 4,
+      "incidencias": [
+        "Los encabezados no estaban en la primera fila, sino en la fila 4."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "Ana Munoz",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ],
+        [
+          {
+            "texto": "Luis Pena",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012346",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "3",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.0"
+          },
+          {
+            "texto": "2.8",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "2.8"
+          },
+          {
+            "texto": "3.1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.1"
+          },
+          {
+            "texto": "2.95",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "3.0"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 1,
+      "incidencias": [],
+      "filas": [
+        [
+          {
+            "texto": "Ana",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "1.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "0.00",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 1,
+      "incidencias": [],
+      "filas": [
+        [
+          {
+            "texto": "Ana",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "1.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 1,
+      "incidencias": [],
+      "filas": [
+        [
+          {
+            "texto": "Ana",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "1.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "@",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "1 celda(s) muestran menos decimales de los que guardan. Lo que ves en Excel puede no ser lo que contiene el archivo."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "Ana",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "1.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "0.0",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": true,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "1 celda(s) tienen fórmulas sin calcular. Abre el archivo en Excel, guárdalo con Ctrl+S y vuelve a subirlo."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "Ana Munoz",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "",
+            "formula": "=AVERAGE(C2:E2)",
+            "formato": "General",
+            "vacia": true,
+            "formula_sin_calcular": true,
+            "oculta_precision": false,
+            "estado": "formula_sin_calcular",
+            "nota": null
+          }
+        ],
+        [
+          {
+            "texto": "Luis Pena",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012346",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "3",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.0"
+          },
+          {
+            "texto": "2.8",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "2.8"
+          },
+          {
+            "texto": "3.1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.1"
+          },
+          {
+            "texto": "",
+            "formula": null,
+            "formato": "General",
+            "vacia": true,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "vacia",
+            "nota": null
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 1,
+      "incidencias": [],
+      "filas": [
+        [
+          {
+            "texto": "Ana Munoz",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ],
+        [
+          {
+            "texto": "Luis Pena",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012346",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "3",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.0"
+          },
+          {
+            "texto": "2.8",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "2.8"
+          },
+          {
+            "texto": "3.1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.1"
+          },
+          {
+            "texto": "2.95",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "3.0"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "nota definitiva"
+      ],
+      "hoja": "latin1.csv",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "Archivo de texto leído con delimitador ';'."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "Ana Muñoz Peña",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "codigo de estudiante",
+        "nota definitiva"
+      ],
+      "hoja": "punto-y-coma.csv",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "Archivo de texto leído con delimitador ';'."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4,25",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "La fila 4 parece un total o promedio, no un estudiante. Revísala: no debería cargarse a Banner."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "Ana Munoz",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ],
+        [
+          {
+            "texto": "Luis Pena",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012346",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "3",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.0"
+          },
+          {
+            "texto": "2.8",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "2.8"
+          },
+          {
+            "texto": "3.1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.1"
+          },
+          {
+            "texto": "2.95",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "3.0"
+          }
+        ],
+        [
+          {
+            "texto": "",
+            "formula": null,
+            "formato": "General",
+            "vacia": true,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "vacia",
+            "nota": null
+          },
+          {
+            "texto": "PROMEDIO",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "",
+            "formula": null,
+            "formato": "General",
+            "vacia": true,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "vacia",
+            "nota": null
+          },
+          {
+            "texto": "",
+            "formula": null,
+            "formato": "General",
+            "vacia": true,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "vacia",
+            "nota": null
+          },
+          {
+            "texto": "",
+            "formula": null,
+            "formato": "General",
+            "vacia": true,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "vacia",
+            "nota": null
+          },
+          {
+            "texto": "3.6",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.6"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": "SinEncabezado",
+    "tabla": null
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "codigo de estudiante",
+        "nota definitiva"
+      ],
+      "hoja": "tabulador.txt",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "Archivo de texto leído con delimitador '\t'."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Notas",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "El archivo tiene 3 hojas; usé 'Notas'."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "Ana Munoz",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4.5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          },
+          {
+            "texto": "4.2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.2"
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ],
+        [
+          {
+            "texto": "Luis Pena",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "0012346",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "3",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.0"
+          },
+          {
+            "texto": "2.8",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "2.8"
+          },
+          {
+            "texto": "3.1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.1"
+          },
+          {
+            "texto": "2.95",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "3.0"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "codigo de estudiante",
+        "nota definitiva"
+      ],
+      "hoja": "utf8-bom.csv",
+      "fila_encabezado": 1,
+      "incidencias": [
+        "Archivo de texto leído con delimitador ';'."
+      ],
+      "filas": [
+        [
+          {
+            "texto": "0012345",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4.25",
+            "formula": null,
+            "formato": null,
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "redondeada",
+            "nota": "4.3"
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "error": null,
+    "tabla": {
+      "encabezados": [
+        "nombre",
+        "codigo de estudiante",
+        "trabajos",
+        "quizes",
+        "examen",
+        "nota definitiva"
+      ],
+      "hoja": "Sheet",
+      "fila_encabezado": 1,
+      "incidencias": [],
+      "filas": [
+        [
+          {
+            "texto": "A",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "1",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "1.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "NP",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          }
+        ],
+        [
+          {
+            "texto": "B",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "2",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "2.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "",
+            "formula": null,
+            "formato": "General",
+            "vacia": true,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "vacia",
+            "nota": null
+          }
+        ],
+        [
+          {
+            "texto": "C",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "3",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "3.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4,5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.5"
+          }
+        ],
+        [
+          {
+            "texto": "D",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "85",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          }
+        ],
+        [
+          {
+            "texto": "E",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "5",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "5.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "0",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "0.0"
+          }
+        ],
+        [
+          {
+            "texto": "F",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          },
+          {
+            "texto": "6",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "fuera_de_rango",
+            "nota": null
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "4",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "ok",
+            "nota": "4.0"
+          },
+          {
+            "texto": "True",
+            "formula": null,
+            "formato": "General",
+            "vacia": false,
+            "formula_sin_calcular": false,
+            "oculta_precision": false,
+            "estado": "no_numerica",
+            "nota": null
+          }
+        ]
+      ]
+    }
+  }
+]

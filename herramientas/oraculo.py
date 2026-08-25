@@ -633,6 +633,215 @@ def evaluar_plantilla_io(casos: list[dict[str, object]]) -> list[dict[str, objec
     return resultados
 
 
+# --------------------------------------------------------------------------
+# Modulo `lectura`: el lector tolerante.
+#
+# Las fixtures se generan aqui con openpyxl y se versionan, para que las dos
+# implementaciones lean exactamente los mismos bytes. Fabricarlas en cada lado
+# no serviria: la mitad de lo que se compara -formatos, formulas sin calcular,
+# celdas combinadas- depende de como quedo escrito el archivo.
+#
+#   python herramientas/oraculo.py --modulo lectura --generar-fixtures
+# --------------------------------------------------------------------------
+
+CORPUS_LECTURA = AQUI / "corpus-lectura.json"
+
+FIXTURES = AQUI.parent / "tests" / "fixtures" / "lectura"
+
+ENCABEZADOS = [
+    "nombre", "codigo de estudiante", "trabajos", "quizes", "examen",
+    "nota definitiva",
+]
+FILAS_BASE = [
+    ["Ana Munoz", "0012345", 4.0, 4.5, 4.2, 4.25],
+    ["Luis Pena", "0012346", 3.0, 2.8, 3.1, 2.95],
+]
+
+
+def generar_fixtures() -> list[str]:
+    from openpyxl import Workbook
+
+    FIXTURES.mkdir(parents=True, exist_ok=True)
+    escritos: list[str] = []
+
+    def guardar(libro, nombre):
+        libro.save(FIXTURES / nombre)
+        escritos.append(nombre)
+
+    def basico(filas_previas=0, hojas=1, nombre="basico.xlsx"):
+        libro = Workbook()
+        hoja = libro.active
+        hoja.title = "Notas"
+        for _ in range(filas_previas):
+            hoja.append([])
+        hoja.append(ENCABEZADOS)
+        for fila in FILAS_BASE:
+            hoja.append(fila)
+        for extra in range(1, hojas):
+            libro.create_sheet(f"Hoja{extra}")
+        guardar(libro, nombre)
+
+    basico()
+    basico(filas_previas=3, nombre="encabezado-fila-4.xlsx")
+    basico(hojas=3, nombre="tres-hojas.xlsx")
+
+    # Filas vacias intercaladas.
+    libro = Workbook()
+    hoja = libro.active
+    hoja.append(ENCABEZADOS)
+    hoja.append(FILAS_BASE[0])
+    hoja.append([])
+    hoja.append(FILAS_BASE[1])
+    guardar(libro, "huecos.xlsx")
+
+    # Formula sin calcular junto a una celda genuinamente vacia (3.1).
+    libro = Workbook()
+    hoja = libro.active
+    hoja.append(ENCABEZADOS)
+    hoja.append(["Ana Munoz", "0012345", 4.0, 4.5, 4.2, "=AVERAGE(C2:E2)"])
+    hoja.append(["Luis Pena", "0012346", 3.0, 2.8, 3.1, None])
+    guardar(libro, "formulas.xlsx")
+
+    # El formato que oculta precision (3.2).
+    for formato, nombre in [
+        ("0.0", "formato-un-decimal.xlsx"),
+        ("0.00", "formato-dos-decimales.xlsx"),
+        ("General", "formato-general.xlsx"),
+        ("@", "formato-texto.xlsx"),
+    ]:
+        libro = Workbook()
+        hoja = libro.active
+        hoja.append(ENCABEZADOS)
+        hoja.append(["Ana", "1", 4.0, 4.5, 4.2, 4.25])
+        hoja.cell(row=2, column=6).number_format = formato
+        guardar(libro, nombre)
+
+    # Encabezado combinado.
+    libro = Workbook()
+    hoja = libro.active
+    hoja.append(["Consolidado de notas", None, None])
+    hoja.merge_cells("A1:C1")
+    hoja.append(["codigo de estudiante", "examen", "nota definitiva"])
+    hoja.append(["0012345", 4.2, 4.25])
+    guardar(libro, "combinadas.xlsx")
+
+    # Fila de resumen al final.
+    libro = Workbook()
+    hoja = libro.active
+    hoja.append(ENCABEZADOS)
+    for fila in FILAS_BASE:
+        hoja.append(fila)
+    hoja.append([None, "PROMEDIO", None, None, None, 3.6])
+    guardar(libro, "resumen.xlsx")
+
+    # Sin encabezado reconocible.
+    libro = Workbook()
+    hoja = libro.active
+    for _ in range(5):
+        hoja.append([1, 2, 3])
+    guardar(libro, "sin-encabezado.xlsx")
+
+    # Valores raros en la columna de nota.
+    libro = Workbook()
+    hoja = libro.active
+    hoja.append(ENCABEZADOS)
+    hoja.append(["A", "1", 4.0, 4.0, 4.0, "NP"])
+    hoja.append(["B", "2", 4.0, 4.0, 4.0, ""])
+    hoja.append(["C", "3", 4.0, 4.0, 4.0, "4,5"])
+    hoja.append(["D", "4", 4.0, 4.0, 4.0, 85])
+    hoja.append(["E", "5", 4.0, 4.0, 4.0, 0])
+    hoja.append(["F", "6", 4.0, 4.0, 4.0, True])
+    guardar(libro, "valores-raros.xlsx")
+
+    # Columnas fantasma a la derecha del encabezado.
+    libro = Workbook()
+    hoja = libro.active
+    hoja.append(ENCABEZADOS + [None, None])
+    hoja.append(FILAS_BASE[0] + [None, "basura"])
+    guardar(libro, "columnas-fantasma.xlsx")
+
+    # Archivos de texto.
+    textos = [
+        ("punto-y-coma.csv",
+         "codigo de estudiante;nota definitiva\n0012345;4,25\n", "utf-8"),
+        ("coma.csv",
+         "codigo de estudiante,nota definitiva\n0012345,4.25\n", "utf-8"),
+        ("latin1.csv",
+         "nombre;codigo de estudiante;nota definitiva\nAna Mu\xf1oz Pe\xf1a;0012345;4.5\n",
+         "latin-1"),
+        ("utf8-bom.csv",
+         "codigo de estudiante;nota definitiva\n0012345;4.25\n", "utf-8-sig"),
+        ("comillas.csv",
+         'codigo de estudiante;nombre;nota definitiva\n0012345;"Munoz; Ana";4.25\n',
+         "utf-8"),
+        ("tabulador.txt",
+         "codigo de estudiante\tnota definitiva\n0012345\t4.25\n", "utf-8"),
+    ]
+    for nombre, contenido, codificacion in textos:
+        (FIXTURES / nombre).write_text(contenido, encoding=codificacion)
+        escritos.append(nombre)
+
+    return escritos
+
+
+def generar_corpus_lectura() -> list[dict[str, object]]:
+    return [
+        {"archivo": nombre}
+        for nombre in sorted(p.name for p in FIXTURES.iterdir() if p.is_file())
+    ]
+
+
+def evaluar_lectura(casos: list[dict[str, object]]) -> list[dict[str, object]]:
+    from formateador.lectura import ArchivoNoSoportado, SinEncabezado, leer
+    from formateador.valores import interpretar
+
+    catalogo = CatalogoAlias.desde_json(AQUI.parent / "config" / "alias_columnas.json")
+    resultados: list[dict[str, object]] = []
+
+    for caso in casos:
+        ruta = FIXTURES / str(caso["archivo"])
+        try:
+            tabla = leer(ruta, catalogo)
+        except (SinEncabezado, ArchivoNoSoportado) as exc:
+            resultados.append({"error": type(exc).__name__, "tabla": None})
+            continue
+
+        filas = []
+        for fila in tabla.filas:
+            celdas = []
+            for c in fila:
+                nota = interpretar(c.valor, formula_sin_calcular=c.formula_sin_calcular)
+                celdas.append(
+                    {
+                        "texto": c.texto(),
+                        "formula": c.formula,
+                        "formato": c.formato,
+                        "vacia": c.vacia,
+                        "formula_sin_calcular": c.formula_sin_calcular,
+                        "oculta_precision": c.oculta_precision,
+                        # Lo que de verdad llega a Banner: la prueba mas dura.
+                        "estado": nota.estado.value,
+                        "nota": None if nota.valor is None else f"{nota.valor:.1f}",
+                    }
+                )
+            filas.append(celdas)
+
+        resultados.append(
+            {
+                "error": None,
+                "tabla": {
+                    "encabezados": tabla.encabezados,
+                    "hoja": tabla.hoja,
+                    "fila_encabezado": tabla.fila_encabezado,
+                    "incidencias": tabla.incidencias,
+                    "filas": filas,
+                },
+            }
+        )
+
+    return resultados
+
+
 MODULOS = {
     "redondeo": (CORPUS, generar_corpus, evaluar),
     "valores": (CORPUS_VALORES, generar_corpus_valores, evaluar_valores),
@@ -643,12 +852,18 @@ MODULOS = {
         generar_corpus_plantilla_io,
         evaluar_plantilla_io,
     ),
+    "lectura": (CORPUS_LECTURA, generar_corpus_lectura, evaluar_lectura),
 }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--generar-corpus", action="store_true")
+    parser.add_argument(
+        "--generar-fixtures",
+        action="store_true",
+        help="solo para --modulo lectura: fabrica los .xlsx y .csv de prueba",
+    )
     parser.add_argument("--modulo", choices=sorted(MODULOS), default="redondeo")
     args = parser.parse_args()
 
@@ -658,6 +873,14 @@ def main() -> int:
         sys.stdout.reconfigure(encoding="utf-8", newline="\n")
 
     corpus, generar, evaluador = MODULOS[args.modulo]
+
+    if args.generar_fixtures:
+        if args.modulo != "lectura":
+            print("--generar-fixtures solo aplica a --modulo lectura", file=sys.stderr)
+            return 1
+        for nombre in generar_fixtures():
+            print(f"  + {nombre}", file=sys.stderr)
+        return 0
 
     if args.generar_corpus:
         corpus.write_text(

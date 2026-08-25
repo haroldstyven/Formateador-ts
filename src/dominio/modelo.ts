@@ -29,16 +29,22 @@ export type Estado =
 /** Qué hacer con un token no numérico. Por defecto: preguntar. */
 export type Accion = "preguntar" | "reemplazar" | "dejar_vacio" | "descartar_fila";
 
-/** Una celda leída del archivo, con su rastro de origen. Ver `lectura.py`. */
+/**
+ * Una celda del archivo del docente, con lo necesario para no equivocarse al
+ * interpretarla. Los predicados que se derivan de ella viven en `celda.ts`.
+ */
 export interface Celda {
-  readonly fila: number;
-  readonly columna: number;
-  /** Valor tal como quedó almacenado, siempre como texto (§3.4). */
+  /**
+   * Valor tal como quedó almacenado, **siempre como texto** (§3.4). `null` si
+   * la celda no tenía valor: no es lo mismo que la cadena vacía, y de esa
+   * distinción depende separar una fórmula sin calcular de una celda sin
+   * calificar.
+   */
   readonly valor: string | null;
   /** Fórmula presente en la celda, si la había (§3.1, doble lectura). */
   readonly formula: string | null;
-  /** Decimales que el formato de Excel mostraba, para detectar §3.2. */
-  readonly decimalesMostrados: number | null;
+  /** El formato numérico de Excel, para detectar la precisión oculta (§3.2). */
+  readonly formato: string | null;
 }
 
 /** Tabla tolerante leída del archivo del docente. */

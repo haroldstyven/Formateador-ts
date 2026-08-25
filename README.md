@@ -3,9 +3,9 @@
 Migración del núcleo determinista a Next.js + TypeScript sobre arquitectura
 hexagonal, que es el stack de la organización.
 
-**Estado:** todo el dominio puro está portado y en verde — redondeo, valores,
-mapeo y el cruce contra la plantilla. Lo que falta son los adaptadores: leer el
-Excel del docente, escribir el `.xlsx` de cargue y la interfaz.
+**Estado:** portados el dominio completo y los dos adaptadores de archivos —
+redondeo, valores, mapeo, el cruce, la escritura de la plantilla de Banner y el
+lector tolerante. Falta orquestarlo todo (`flujo`) y la interfaz.
 
 ```bash
 npm install
@@ -108,6 +108,8 @@ src/
     similitud.ts    ✅ PORTADO — difflib.SequenceMatcher, exacto
     plantilla.ts    ✅ PORTADO — esquema de Banner y el cruce por Student ID
     analisis.ts     ✅ PORTADO — predicados derivados sobre el análisis
+    celda.ts        ✅ PORTADO — qué se puede decir de una celda (§3.1, §3.2)
+    tabla.ts        ✅ PORTADO — de matriz de celdas a tabla con encabezados
 
   aplicacion/       Casos de uso y puertos. Depende del dominio, nada más.
     puertos.ts      ✅ Las interfaces del hexágono
@@ -117,7 +119,7 @@ src/
     salida/
       ooxml.ts            ✅ zip + XML: leer una hoja y cambiar una celda
       plantilla-zip.ts    ✅ PORTADO — la plantilla de Banner, sin reabrir el libro
-      lectura-exceljs.ts  ⬜ port de lectura.py
+      lectura-xlsx.ts     ✅ PORTADO — lector tolerante de .xlsx y .csv
     entrada/
       (web)         ⬜ Next.js App Router
       (cli)         ⬜ port de formatear.py
@@ -154,14 +156,27 @@ Por dependencia y riesgo, igual que las fases del plan.
 | 3 | ✅ `mapeo.ts` + `similitud.ts` | `mapeo.py` | `test_mapeo.py` — **hecho** |
 | 4a | ✅ `plantilla.ts` + `analisis.ts` | `plantilla.py` (parte pura) | `test_plantilla.py` — cruce **hecho** |
 | 4b | ✅ `plantilla-zip.ts` + `ooxml.ts` | `plantilla.py` (I/O) | `test_plantilla.py` — I/O **hecho** |
-| 5 | `lectura-exceljs.ts` | `lectura.py` | `test_lectura.py` |
+| 5 | ✅ `lectura-xlsx.ts` + `celda.ts` + `tabla.ts` | `lectura.py` | `test_lectura.py` — **hecho** |
 | 6 | `formatear-notas.ts` | `flujo.py` + `reporte.py` | `test_flujo.py` |
 | 7 | Adaptador web | `app.py` | — |
 
 Después de cada paso, el corpus se amplía con los casos de ese módulo y la
-prueba diferencial los cubre también. Hoy son **616 casos** en cinco pares de
+prueba diferencial los cubre también. Hoy son **636 casos** en seis pares de
 archivos: 199 de redondeo, 335 de interpretación de celdas, 52 de mapeo, 21 del
-cruce por identificador y 9 de lectura y escritura del `.xlsx`.
+cruce por identificador, 9 de escritura del `.xlsx` y 20 del lector tolerante.
+
+### Cuando la divergencia es del lenguaje, no de la decisión
+
+`herramientas/desviaciones.json` lleva la lista de divergencias **aceptadas**,
+una por una y con su razón. Existe porque la referencia está congelada: cuando
+el port tiene razón no siempre se puede regenerar el dorado, porque a veces lo
+que diverge es un artefacto del lenguaje —el `repr` de un booleano en Python— y
+no una decisión.
+
+Cualquier divergencia que **no** esté en esa lista rompe el build. Y una
+entrada que deje de ocurrir también, para que la lista no se llene de fantasmas.
+
+Hoy tiene **una sola** entrada, y conviene saber de dónde salió.
 
 > **`BL-07b` deja de estar pendiente.** `plan.md` §2.2 anotó que guardar con
 > `openpyxl` no reproduce el archivo byte a byte —se pierde la cadena vacía de
@@ -204,10 +219,10 @@ cruce por identificador y 9 de lectura y escritura del `.xlsx`.
 | Python | TypeScript | Cuidado |
 |---|---|---|
 | `decimal.Decimal` | `decimal.js` | `Number.toFixed()` falla en 20 de 50 casos de frontera. Prohibido |
-| `openpyxl` (leer) | `exceljs` | Fórmulas llegan como `{ formula, result }` — la doble lectura de §3.1 se conserva |
+| `openpyxl` (leer) | `ooxml.ts` | ✅ Hecho, sin `exceljs`. En el XML la fórmula y su valor cacheado están en la misma celda, así que la doble lectura de §3.1 sale de una sola pasada |
 | `openpyxl` (escribir) | `fflate` + parche XML | ✅ Hecho. Más fiel que reabrir y guardar: cierra `BL-07b` |
 | `difflib.SequenceMatcher` | `src/dominio/similitud.ts` | Reimplementado, no sustituido. Ver abajo |
-| `csv` + `latin-1` | `TextDecoder` | Probar la misma cascada: utf-8-sig, utf-8, cp1252, latin-1 |
+| `csv` + `latin-1` | `TextDecoder` | ✅ Hecho, con `fatal: true` para que el intento falle en vez de rellenar con basura |
 | `unittest` | `vitest` | — |
 
 ## Lo que no cambia con el port
@@ -216,3 +231,22 @@ cruce por identificador y 9 de lectura y escritura del `.xlsx`.
 sigue siendo la matriz que decide si esto sirve. **La Fase 1 sigue siendo el
 único bloqueo real:** que Banner acepte un archivo generado por la herramienta
 es independiente del lenguaje, y si lo rechaza, lo rechaza igual en TypeScript.
+
+---
+
+## Lo que la prueba diferencial ha encontrado
+
+No es un adorno del proceso. Hasta ahora ha cazado dos defectos reales, uno en
+cada dirección, y ninguno de los dos se habría visto revisando el código.
+
+**En la referencia — el cero negativo.** `formatear("-0.0")` devolvía `"-0.0"`.
+`Decimal` conserva el signo al cuantizar y `en_rango` acepta el valor porque
+`-0.0 == 0.0`; Excel produce ceros negativos por su cuenta. Ese `"-0.0"` podía
+llegar hasta la columna `Final Grade`. Corregido en las dos implementaciones.
+
+**En el port — el booleano que valía 1.0.** Un `TRUE` en la columna de nota se
+guarda en el XML como `<v>1</v>`. El lector devolvía ese crudo, y **el 1.0
+pasaba como una nota perfectamente válida, en silencio**. La referencia lo
+bloqueaba porque openpyxl lo convierte al bool de Python y `a_decimal` rechaza
+los booleanos. Es exactamente la clase de fallo que el proyecto existe para
+evitar: el archivo sale impecable y el estudiante queda con un 1.0.

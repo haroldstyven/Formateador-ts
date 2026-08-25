@@ -15,6 +15,7 @@
  *   mapeo      qué columna es cuál, con los puntajes de difflib
  *   plantilla     el cruce por identificador
  *   plantilla-io  leer el .xlsx y escribir Final Grade
+ *   lectura       el lector tolerante del archivo del docente
  *
  * Cómo se regeneran (solo al ampliar un corpus, y siempre en un commit aparte
  * para que el diff se pueda revisar) — con `herramientas/oraculo.py`, que es de
@@ -72,6 +73,17 @@ import {
 import type { Analisis, FilaAnalizada } from "@dominio/modelo.ts";
 import type { ArchivoEntrante } from "@aplicacion/puertos.ts";
 import {
+  formulaSinCalcular,
+  ocultaPrecision,
+  texto as textoDeCelda,
+  vacia as celdaVacia,
+} from "@dominio/celda.ts";
+import { SinEncabezado } from "@dominio/tabla.ts";
+import {
+  ArchivoNoSoportado,
+  leer as leerArchivo,
+} from "@adaptadores/salida/lectura-xlsx.ts";
+import {
   escribirEnPlantilla,
   leerPlantilla,
 } from "@adaptadores/salida/plantilla-zip.ts";
@@ -88,11 +100,50 @@ function leerJson<T>(ruta: string): T {
   return JSON.parse(readFileSync(`${RAIZ}${ruta}`, "utf-8")) as T;
 }
 
-/** Reporta las divergencias con contexto suficiente para depurarlas. */
-function exigirCoincidencia(divergencias: readonly string[]): void {
+/**
+ * Divergencias aceptadas, declaradas una por una con su razón.
+ *
+ * La referencia está congelada, así que cuando el port tiene razón no siempre
+ * se puede regenerar el dorado: a veces lo que diverge es un artefacto del
+ * lenguaje —el `repr` de un booleano en Python— y no una decisión. Esas van al
+ * archivo, con su razón escrita, nunca al criterio de quien lee el fallo.
+ */
+interface Desviacion {
+  modulo: string;
+  divergencia: string;
+  razon: string;
+}
+
+const DESVIACIONES = leerJson<{ desviaciones: Desviacion[] }>(
+  "herramientas/desviaciones.json",
+).desviaciones;
+
+/**
+ * Exige coincidencia total, descontando las desviaciones declaradas.
+ *
+ * Falla también cuando una desviación declarada deja de ocurrir: sin eso la
+ * lista se llenaría de fantasmas y nadie sabría cuáles siguen vivas.
+ */
+function exigirCoincidencia(divergencias: readonly string[], modulo?: string): void {
+  const declaradas = modulo ? DESVIACIONES.filter((d) => d.modulo === modulo) : [];
+  const permitidas = new Set(declaradas.map((d) => d.divergencia));
+
+  const inesperadas = divergencias.filter((d) => !permitidas.has(d));
   expect(
-    divergencias,
-    divergencias.length ? `\n${divergencias.slice(0, 20).join("\n")}\n` : undefined,
+    inesperadas,
+    inesperadas.length ? `\n${inesperadas.slice(0, 20).join("\n")}\n` : undefined,
+  ).toHaveLength(0);
+
+  const vistas = new Set(divergencias);
+  const fantasmas = declaradas
+    .filter((d) => !vistas.has(d.divergencia))
+    .map((d) => d.divergencia);
+  expect(
+    fantasmas,
+    fantasmas.length
+      ? `\nDesviaciones declaradas que ya no ocurren; bórralas de ` +
+          `desviaciones.json:\n${fantasmas.join("\n")}\n`
+      : undefined,
   ).toHaveLength(0);
 }
 
@@ -638,5 +689,150 @@ describe("plantilla-io · diferencial contra el oráculo Python", () => {
     });
 
     exigirCoincidencia(divergencias);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Módulo lectura — el lector tolerante
+//
+// Las fixtures están versionadas en `tests/fixtures/lectura/`, generadas con
+// openpyxl por el oráculo. Fabricarlas en cada lado no serviría: la mitad de lo
+// que se compara —formatos, fórmulas sin calcular, celdas combinadas— depende
+// de cómo quedó escrito el archivo, no de lo que el test creyó escribir.
+//
+// Se compara la tabla entera, celda por celda, y además lo que cada celda
+// produce al interpretarla. Eso último es la prueba dura: es lo que acabaría
+// escrito en Banner.
+// ---------------------------------------------------------------------------
+
+interface CasoLectura {
+  archivo: string;
+}
+
+interface CeldaDorada {
+  texto: string;
+  formula: string | null;
+  formato: string | null;
+  vacia: boolean;
+  formula_sin_calcular: boolean;
+  oculta_precision: boolean;
+  estado: string;
+  nota: string | null;
+}
+
+interface ResultadoLectura {
+  error: string | null;
+  tabla: {
+    encabezados: string[];
+    hoja: string;
+    fila_encabezado: number;
+    incidencias: string[];
+    filas: CeldaDorada[][];
+  } | null;
+}
+
+describe("lectura · diferencial contra el oráculo Python", () => {
+  const corpus = leerJson<CasoLectura[]>("herramientas/corpus-lectura.json");
+  const dorado = leerJson<ResultadoLectura[]>("herramientas/salida-python-lectura.json");
+  const catalogo = CatalogoAlias.desdeObjeto(
+    leerJson<unknown>("config/alias_columnas.json"),
+  );
+
+  it("el corpus y el archivo dorado tienen el mismo tamaño", () => {
+    expect(dorado).toHaveLength(corpus.length);
+    expect(corpus.length).toBeGreaterThan(0);
+  });
+
+  it("el corpus incluye archivos que deben fallar", () => {
+    expect(dorado.some((r) => r.error !== null)).toBe(true);
+  });
+
+  it("TypeScript y Python coinciden en el 100% de los casos", () => {
+    const divergencias: string[] = [];
+
+    corpus.forEach((caso, i) => {
+      const esperado = dorado[i]!;
+      const archivo: ArchivoEntrante = {
+        nombre: caso.archivo,
+        bytes: new Uint8Array(
+          readFileSync(`${RAIZ}tests/fixtures/lectura/${caso.archivo}`),
+        ),
+      };
+
+      let tabla;
+      try {
+        tabla = leerArchivo(archivo, catalogo);
+      } catch (e) {
+        const clase =
+          e instanceof SinEncabezado
+            ? "SinEncabezado"
+            : e instanceof ArchivoNoSoportado
+              ? "ArchivoNoSoportado"
+              : String(e);
+        if (clase !== esperado.error) {
+          divergencias.push(
+            `[${caso.archivo}] error: python=${esperado.error} ts=${clase}`,
+          );
+        }
+        return;
+      }
+
+      if (esperado.error !== null) {
+        divergencias.push(
+          `[${caso.archivo}] python falló con ${esperado.error} y ts no falló`,
+        );
+        return;
+      }
+
+      const e = esperado.tabla!;
+      const anota = (campo: string, py: unknown, ts: unknown) => {
+        if (JSON.stringify(py) !== JSON.stringify(ts)) {
+          divergencias.push(
+            `[${caso.archivo}] ${campo}: python=${JSON.stringify(py)} ts=${JSON.stringify(ts)}`,
+          );
+        }
+      };
+
+      anota("encabezados", e.encabezados, tabla.encabezados);
+      anota("hoja", e.hoja, tabla.hoja);
+      anota("fila_encabezado", e.fila_encabezado, tabla.filaEncabezado);
+      anota("incidencias", e.incidencias, tabla.incidencias);
+      anota("numero de filas", e.filas.length, tabla.filas.length);
+
+      e.filas.forEach((filaEsperada, f) => {
+        const filaObtenida = tabla.filas[f];
+        if (!filaObtenida) return;
+        filaEsperada.forEach((ce, c) => {
+          const celda = filaObtenida[c];
+          if (!celda) {
+            divergencias.push(`[${caso.archivo}] falta la celda [${f}][${c}]`);
+            return;
+          }
+          const nota = interpretar(celda.valor, undefined, {
+            formulaSinCalcular: formulaSinCalcular(celda),
+          });
+          const co: CeldaDorada = {
+            texto: textoDeCelda(celda),
+            formula: celda.formula,
+            formato: celda.formato,
+            vacia: celdaVacia(celda),
+            formula_sin_calcular: formulaSinCalcular(celda),
+            oculta_precision: ocultaPrecision(celda),
+            estado: nota.estado,
+            nota: nota.valor === null ? null : nota.valor.toFixed(1),
+          };
+          for (const campo of Object.keys(ce) as (keyof CeldaDorada)[]) {
+            if (co[campo] !== ce[campo]) {
+              divergencias.push(
+                `[${caso.archivo}] celda[${f}][${c}].${campo}: ` +
+                  `python=${JSON.stringify(ce[campo])} ts=${JSON.stringify(co[campo])}`,
+              );
+            }
+          }
+        });
+      });
+    });
+
+    exigirCoincidencia(divergencias, "lectura");
   });
 });

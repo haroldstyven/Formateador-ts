@@ -1,0 +1,11 @@
+{
+  "_nota": "Divergencias ACEPTADAS entre el port y la implementación de referencia. La referencia está congelada, así que cuando el port tiene razón no siempre se puede regenerar el dorado: a veces lo que diverge es un artefacto del lenguaje, no una decisión. Esas van aquí, una por una, con su razón. Cualquier divergencia que NO esté en esta lista rompe el build. Y una entrada que deje de ocurrir también lo rompe, para que la lista no se llene de fantasmas.",
+
+  "desviaciones": [
+    {
+      "modulo": "lectura",
+      "divergencia": "[valores-raros.xlsx] celda[5][5].texto: python=\"True\" ts=\"TRUE\"",
+      "razon": "Cómo se muestra un booleano, no qué se decide con él. En OOXML el valor se guarda como <v>1</v>; openpyxl lo convierte al bool de Python y su repr es 'True'. El port emite 'TRUE', que es como lo muestra Excel y lo que el docente reconocería en el diff. Arrastrar el repr de Python a un código TypeScript sería copiar un artefacto del lenguaje. Lo que sí coincide es todo lo que decide algo: la celda queda en estado 'no_numerica', sin nota y bloqueando la generación — un TRUE en la columna de nota nunca se convierte en un 1.0."
+    }
+  ]
+}

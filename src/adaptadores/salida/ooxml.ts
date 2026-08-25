@@ -359,3 +359,242 @@ function agregarCadenas(
 
   reemplazarParte(libro, RUTA_CADENAS, xml);
 }
+
+// ---------------------------------------------------------------------------
+// Lectura detallada — lo que hace falta para el archivo del docente
+//
+// Para la plantilla de Banner basta el texto de cada celda. Para el archivo del
+// docente no: hay que distinguir una fórmula sin calcular de una celda vacía
+// (§3.1) y saber cuántos decimales muestra el formato (§3.2). Eso obliga a
+// mirar tres cosas que `leerHoja` no necesitaba: el `<f>` de la celda, su
+// índice de estilo y la tabla de formatos de `styles.xml`.
+// ---------------------------------------------------------------------------
+
+/** Formatos numéricos incorporados de OOXML, por su id. */
+const FORMATOS_INCORPORADOS: Readonly<Record<number, string>> = {
+  0: "General",
+  1: "0",
+  2: "0.00",
+  3: "#,##0",
+  4: "#,##0.00",
+  9: "0%",
+  10: "0.00%",
+  11: "0.00E+00",
+  12: "# ?/?",
+  13: "# ??/??",
+  14: "mm-dd-yy",
+  15: "d-mmm-yy",
+  16: "d-mmm",
+  17: "mmm-yy",
+  18: "h:mm AM/PM",
+  19: "h:mm:ss AM/PM",
+  20: "h:mm",
+  21: "h:mm:ss",
+  22: "m/d/yy h:mm",
+  45: "mm:ss",
+  46: "[h]:mm:ss",
+  47: "mmss.0",
+  48: "##0.0E+0",
+  49: "@",
+};
+
+/**
+ * El formato de cada índice de `cellXfs`, que es lo que la celda referencia con
+ * su atributo `s`. Una celda sin `s` usa el índice 0, que por defecto es
+ * "General".
+ */
+export function formatosDeCelda(libro: Libro): string[] {
+  if (!libro.partes.has("xl/styles.xml")) return ["General"];
+  const xml = texto(libro, "xl/styles.xml");
+
+  const personalizados = new Map<number, string>();
+  for (const m of xml.matchAll(
+    /<numFmt\b[^>]*\bnumFmtId="(\d+)"[^>]*\bformatCode="([^"]*)"/g,
+  )) {
+    personalizados.set(Number.parseInt(m[1]!, 10), desescapar(m[2]!));
+  }
+
+  const bloque = /<cellXfs\b[^>]*>([\s\S]*?)<\/cellXfs>/.exec(xml)?.[1] ?? "";
+  const formatos: string[] = [];
+  for (const xf of bloque.matchAll(/<xf\b([^>]*?)(?:\/>|>[\s\S]*?<\/xf>)/g)) {
+    const id = Number.parseInt(/\bnumFmtId="(\d+)"/.exec(xf[1]!)?.[1] ?? "0", 10);
+    formatos.push(personalizados.get(id) ?? FORMATOS_INCORPORADOS[id] ?? "General");
+  }
+  return formatos.length ? formatos : ["General"];
+}
+
+/** Las hojas del libro, en su orden, con la parte del zip que las contiene. */
+export function hojas(libro: Libro): { nombre: string; ruta: string }[] {
+  const workbook = libro.partes.has(RUTA_LIBRO) ? texto(libro, RUTA_LIBRO) : "";
+  const rels = libro.partes.has("xl/_rels/workbook.xml.rels")
+    ? texto(libro, "xl/_rels/workbook.xml.rels")
+    : "";
+
+  const destinoPorId = new Map<string, string>();
+  for (const m of rels.matchAll(/<Relationship\b[^>]*>/g)) {
+    const id = /\bId="([^"]*)"/.exec(m[0])?.[1];
+    const destino = /\bTarget="([^"]*)"/.exec(m[0])?.[1];
+    if (id && destino) {
+      destinoPorId.set(id, destino.startsWith("/") ? destino.slice(1) : "xl/" + destino);
+    }
+  }
+
+  const salida: { nombre: string; ruta: string }[] = [];
+  for (const m of workbook.matchAll(/<sheet\b[^>]*>/g)) {
+    const nombre = /\bname="([^"]*)"/.exec(m[0])?.[1];
+    const id = /\br:id="([^"]*)"/.exec(m[0])?.[1];
+    if (!nombre) continue;
+    const ruta = normalizarRuta((id && destinoPorId.get(id)) || "");
+    if (ruta && libro.partes.has(ruta)) salida.push({ nombre, ruta });
+  }
+
+  // Sin relaciones utilizables, se cae a la convención habitual.
+  if (salida.length === 0 && libro.partes.has(RUTA_HOJA_1)) {
+    const nombre = /<sheet\b[^>]*\bname="([^"]*)"/.exec(workbook)?.[1] ?? "Hoja1";
+    salida.push({ nombre, ruta: RUTA_HOJA_1 });
+  }
+  return salida;
+}
+
+function normalizarRuta(ruta: string): string {
+  const partes: string[] = [];
+  for (const parte of ruta.split("/")) {
+    if (parte === "." || parte === "") continue;
+    if (parte === "..") partes.pop();
+    else partes.push(parte);
+  }
+  return partes.join("/");
+}
+
+/** Una celda con todo lo que hace falta para no equivocarse al interpretarla. */
+export interface CeldaCruda {
+  readonly fila: number;
+  readonly columna: number;
+  /** El texto crudo del `<v>`, o de los `<t>` si es cadena. `null` si no hay. */
+  readonly valor: string | null;
+  /** El tipo declarado: "s", "inlineStr", "str", "b", "e" o "n". */
+  readonly tipo: string;
+  /** La fórmula con su signo igual delante, o `null`. */
+  readonly formula: string | null;
+  readonly formato: string;
+}
+
+/** Rangos combinados de la hoja, como `[filaMin, colMin, filaMax, colMax]`. */
+function rangosCombinados(xml: string): [number, number, number, number][] {
+  const salida: [number, number, number, number][] = [];
+  for (const m of xml.matchAll(/<mergeCell\b[^>]*\bref="([A-Z]+\d+):([A-Z]+\d+)"/g)) {
+    const a = partirReferencia(m[1]!);
+    const b = partirReferencia(m[2]!);
+    salida.push([
+      Math.min(a.fila, b.fila),
+      Math.min(indiceDeColumna(a.columna), indiceDeColumna(b.columna)),
+      Math.max(a.fila, b.fila),
+      Math.max(indiceDeColumna(a.columna), indiceDeColumna(b.columna)),
+    ]);
+  }
+  return salida;
+}
+
+const CELDA_VACIA = {
+  valor: null,
+  tipo: "n",
+  formula: null,
+  formato: "General",
+} as const;
+
+/**
+ * La hoja como matriz densa de celdas, del tamaño que ocupe.
+ *
+ * Densa a propósito: la referencia usa `iter_rows()` de openpyxl, que rellena
+ * los huecos. Si aquí se devolvieran solo las celdas presentes, las columnas se
+ * correrían y el archivo saldría con las notas de otro estudiante.
+ */
+export function leerMatriz(libro: Libro, ruta = RUTA_HOJA_1): CeldaCruda[][] {
+  const xml = texto(libro, ruta);
+  const cadenas = leerCadenasCompartidas(libro);
+  const formatos = formatosDeCelda(libro);
+
+  const porFila = new Map<number, Map<number, CeldaCruda>>();
+  let maxFila = 0;
+  let maxColumna = 0;
+
+  const poner = (celda: CeldaCruda): void => {
+    let filaMapa = porFila.get(celda.fila);
+    if (!filaMapa) {
+      filaMapa = new Map();
+      porFila.set(celda.fila, filaMapa);
+    }
+    filaMapa.set(celda.columna, celda);
+    maxFila = Math.max(maxFila, celda.fila);
+    maxColumna = Math.max(maxColumna, celda.columna);
+  };
+
+  for (const m of xml.matchAll(/<c\s([^>]*?)(\/>|>([\s\S]*?)<\/c>)/g)) {
+    const atributos = m[1]!;
+    const cuerpo = m[3] ?? "";
+    const ref = /\br="([A-Z]+\d+)"/.exec(atributos)?.[1];
+    if (!ref) continue;
+
+    const { columna, fila } = partirReferencia(ref);
+    const tipo = /\bt="([^"]+)"/.exec(atributos)?.[1] ?? "n";
+    const estilo = Number.parseInt(/\bs="(\d+)"/.exec(atributos)?.[1] ?? "0", 10);
+
+    const formulaCruda = /<f\b[^>]*>([\s\S]*?)<\/f>/.exec(cuerpo)?.[1];
+    const formula = formulaCruda === undefined ? null : "=" + desescapar(formulaCruda);
+
+    let valor: string | null = null;
+    if (tipo === "s") {
+      const indice = /<v>([\s\S]*?)<\/v>/.exec(cuerpo)?.[1];
+      if (indice !== undefined) valor = cadenas[Number.parseInt(indice, 10)] ?? "";
+    } else if (tipo === "inlineStr") {
+      valor = textoDeNodo(cuerpo);
+    } else if (tipo === "b") {
+      // Un booleano se guarda como <v>1</v> o <v>0</v>. Devolver ese crudo
+      // sería catastrófico: un TRUE en la columna de nota se convertiría en un
+      // 1.0 perfectamente válido, en silencio. Tiene que llegar como texto no
+      // numérico para que el dominio lo bloquee y pregunte.
+      // Lo encontró la prueba diferencial; ver `herramientas/desviaciones.json`.
+      const v = /<v>([\s\S]*?)<\/v>/.exec(cuerpo)?.[1];
+      valor = v === undefined ? null : v.trim() === "0" ? "FALSE" : "TRUE";
+    } else {
+      const v = /<v>([\s\S]*?)<\/v>/.exec(cuerpo)?.[1];
+      valor = v === undefined ? null : desescapar(v);
+    }
+
+    poner({
+      fila,
+      columna: indiceDeColumna(columna),
+      valor,
+      tipo,
+      formula,
+      formato: formatos[estilo] ?? "General",
+    });
+  }
+
+  // Excel guarda el valor de un rango combinado solo en su esquina superior
+  // izquierda; el resto llega vacío. En un encabezado combinado eso borra el
+  // nombre de la columna, así que se propaga.
+  for (const [filaMin, colMin, filaMax, colMax] of rangosCombinados(xml)) {
+    const origen = porFila.get(filaMin)?.get(colMin);
+    if (!origen || origen.valor === null) continue;
+    for (let f = filaMin; f <= filaMax; f++) {
+      for (let c = colMin; c <= colMax; c++) {
+        if (f === filaMin && c === colMin) continue;
+        const destino = porFila.get(f)?.get(c);
+        if (destino && (destino.valor !== null || destino.formula !== null)) continue;
+        poner({ ...origen, fila: f, columna: c });
+      }
+    }
+  }
+
+  const matriz: CeldaCruda[][] = [];
+  for (let f = 1; f <= maxFila; f++) {
+    const filaMapa = porFila.get(f);
+    const fila: CeldaCruda[] = [];
+    for (let c = 1; c <= maxColumna; c++) {
+      fila.push(filaMapa?.get(c) ?? { ...CELDA_VACIA, fila: f, columna: c });
+    }
+    matriz.push(fila);
+  }
+  return matriz;
+}
