@@ -1,11 +1,17 @@
 # Normaliza finales de linea entre Windows y Linux
 * text=auto eol=lf
 
-# El archivo dorado del oraculo se compara literalmente contra la salida de la
-# implementacion Python: si git le cambiara un byte, la prueba diferencial
-# dejaria de significar lo que dice que significa.
-herramientas/salida-python.json text eol=lf
-herramientas/corpus.json text eol=lf
+# Los archivos dorados y sus corpus se comparan literalmente contra la salida de
+# la implementacion de referencia: si git les cambiara un byte, la prueba
+# diferencial dejaria de significar lo que dice que significa.
+herramientas/*.json text eol=lf
+
+# Las fixtures son ENTRADAS de prueba y tienen que ser byte-estables. Se
+# generan una vez con openpyxl y se versionan; que git normalice sus finales de
+# linea cambiaria el archivo que la suite cree estar leyendo. latin1.csv ademas
+# no es UTF-8 a proposito, y marcarlo binario es la unica forma de garantizar
+# que llega intacto a cualquier maquina.
+tests/fixtures/** binary
 
 # Binarios: git no debe tocarlos.
 *.xlsx binary
